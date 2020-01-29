@@ -22,18 +22,8 @@ const mainFeaturedPost :introdunctionProps = {
 const App: React.FC = () => {
   return (
     <React.Fragment>
-      <Container maxWidth="xl">
-        <Header 
-          title={'NamHyun Kim'}
-          buttonLable = {'Button'}
-        />
-        <MainIntrodunction post={mainFeaturedPost.post} />
-
-      </Container>
-      <Footer
-          title= {'Footer 임시'}
-          description = {'이곳에 설명쓰자'}
-        />
+      <MainIntrodunction post={mainFeaturedPost.post} />
+  
     </React.Fragment>
   );
 }
