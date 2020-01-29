@@ -6,7 +6,7 @@ import classNames from "classnames";
 import GridContainer from '../Grid/GridContainer';
 import GridItem from '../Grid/GridItem';
 
-import profile from "../../assets/img/faces/avatar.jpg";
+import profile from "../../assets/img/faces/namhyun.jpg";
 import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
@@ -74,6 +74,9 @@ const useStyles = makeStyles(theme => ({
     marginTop: "30px",
     minHeight: "32px"
   },
+  margin5: {
+    margin: "5px"
+  }
 }));
 
 export interface introdunctionProps {
@@ -123,15 +126,15 @@ export function MainIntrodunction(props : introdunctionProps) {
                   <div className={classes.name}>
                     <h3 className={classes.title}>NamHyun Kim</h3>
                     <h6>Developer</h6>
-                    {/* <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-twitter"} />
+                    <Button className={classes.margin5}>
+                      <i className={"fas fa-envelope"} />
                     </Button>
-                    <Button justIcon link className={classes.margin5}>
+                    <Button className={classes.margin5}>
                       <i className={"fab fa-instagram"} />
                     </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-facebook"} />
-                    </Button> */}
+                    <Button className={classes.margin5}>
+                      <i className={"fab fa-linkedin"} />
+                    </Button>
                   </div>
                 </div>
               </GridItem>
