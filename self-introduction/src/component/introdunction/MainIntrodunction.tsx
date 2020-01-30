@@ -7,7 +7,8 @@ import GridContainer from '../Grid/GridContainer';
 import GridItem from '../Grid/GridItem';
 
 import profile from "../../assets/img/faces/namhyun.jpg";
-import { Button } from '@material-ui/core';
+import { Button, Chip } from '@material-ui/core';
+import GripSensing from './Project/GripSensing';
 
 const useStyles = makeStyles(theme => ({
   main: {
@@ -37,7 +38,7 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: "15px",
     marginRight: "auto",
     marginLeft: "auto",
-    width: "100%",
+    paddingBottom : "20px", //임시
     "@media (min-width: 576px)": {
       maxWidth: "540px"
     },
@@ -61,7 +62,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   name: {
-    marginTop: "-80px"
+    marginTop: "-120px"
   },
   title: {
     color: "#3C4858",
@@ -72,7 +73,32 @@ const useStyles = makeStyles(theme => ({
     display: "inline-block",
     position: "relative",
     marginTop: "30px",
-    minHeight: "32px"
+    minHeight: "32px",
+    fontSize : "25px",
+  },
+  job : {
+    fontSize : "12px",
+    marginTop:"10px",
+    marginBottom : "10px"
+  },
+  description: {
+    margin: "1.071rem auto 0",
+    maxWidth: "600px",
+    color: "#999",
+    textAlign: "center"
+  },
+  chip : {
+    margin : "5px"
+  },
+  project: {
+    textAlign: "center",
+    width: "100%",
+    "& img": {
+      maxWidth: "160px",
+      width: "100%",
+      margin: "0 auto",
+      transform: "translate3d(0, -50%, 0)"
+    }
   },
   margin5: {
     margin: "5px"
@@ -99,6 +125,10 @@ export function MainIntrodunction(props : introdunctionProps) {
   );
   const { post } = props;
 
+  const handleProjectClick = ((event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    console.info(event.currentTarget);
+  });
+
   return (
     <div>
       <Header
@@ -118,14 +148,14 @@ export function MainIntrodunction(props : introdunctionProps) {
         <div>
           <div className={classes.container}>
             <GridContainer justify="center">
-            <GridItem xs={12} sm={12} md={6}>
+              <GridItem xs={12} sm={12} md={6}>
                 <div className={classes.profile}>
                   <div>
                     <img src={profile} alt="..." className={imageClasses} />
                   </div>
                   <div className={classes.name}>
                     <h3 className={classes.title}>NamHyun Kim</h3>
-                    <h6>Developer</h6>
+                    <h6 className={classes.job}> DVELOPER</h6>
                     <Button className={classes.margin5}>
                       <i className={"fas fa-envelope"} />
                     </Button>
@@ -140,6 +170,34 @@ export function MainIntrodunction(props : introdunctionProps) {
               </GridItem>
             
             </GridContainer>
+            <div className={classes.description}>
+              <p>
+                사용가능한 기술들은 어디에 넣을까 ...
+                몰두하는사람.ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ
+                ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ
+                ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ{" "}
+              </p>
+            </div>
+            
+            <GridContainer justify="center">
+              <GridItem xs={12} sm={12}>
+              <div className={classes.project}>
+                <h3 className={classes.title}>Project</h3>
+                <div>
+                  <Chip className={classes.chip} label="GripSensing" onClick={handleProjectClick} />
+                  <Chip className={classes.chip} label="Anylink Eclipse RCP" onClick={handleProjectClick}/>
+                  <Chip className={classes.chip} label="HyperStduio" onClick={handleProjectClick}/>
+                  <Chip className={classes.chip} label="GripSensing" onClick={handleProjectClick}/>
+                  <Chip className={classes.chip} label="GripSensing" onClick={handleProjectClick}/>
+                  <Chip className={classes.chip} label="GripSensing" onClick={handleProjectClick}/>
+                </div>
+              </div>
+
+              <GripSensing/>
+              </GridItem>
+              
+            </GridContainer>
+
               
           </div>
 
