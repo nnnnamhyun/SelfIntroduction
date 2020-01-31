@@ -9,6 +9,9 @@ import GridItem from '../Grid/GridItem';
 import profile from "../../assets/img/faces/namhyun.jpg";
 import { Button, Chip } from '@material-ui/core';
 import GripSensing from './Project/GripSensing';
+import HyperStudio from './Project/HyperStudio';
+import Allight from './Project/Allight';
+import Portfolio from './Project/Portfolio';
 
 const useStyles = makeStyles(theme => ({
   main: {
@@ -125,10 +128,18 @@ export function MainIntrodunction(props : introdunctionProps) {
   );
   const { post } = props;
 
-  const handleProjectClick = ((event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    console.info(event.currentTarget);
-  });
+  const handleProjectClick = (key:number) => {
+    console.info(key);
+  }
 
+  const projectData = [
+      {key:0,label:'Allight'},
+      {key:1,label:'GripSensing'},
+      {key:2,label:'Anylink Studio'},
+      {key:4,label:'HyperStudio'},
+      {key:5,label:'Portfoilo(...ing)'},
+      {key:6,label:'SendInstead (...ing)'}
+    ];
   return (
     <div>
       <Header
@@ -172,10 +183,9 @@ export function MainIntrodunction(props : introdunctionProps) {
             </GridContainer>
             <div className={classes.description}>
               <p>
-                사용가능한 기술들은 어디에 넣을까 ...
-                몰두하는사람.ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ
-                ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ
-                ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ{" "}
+                {`사용자와 직접 Interaction 하는 Front-End 개발을 좋아합니다. UX/UI 개선을 좋아하며, 편리하지만 간결하고 예쁘게 만드는걸 좋아합니다.
+                대부분의 프로젝트에서 Front-end 개발을 맡아 하였습니다. 
+                `}
               </p>
             </div>
             
@@ -184,16 +194,18 @@ export function MainIntrodunction(props : introdunctionProps) {
               <div className={classes.project}>
                 <h3 className={classes.title}>Project</h3>
                 <div>
-                  <Chip className={classes.chip} label="GripSensing" onClick={handleProjectClick} />
-                  <Chip className={classes.chip} label="Anylink Eclipse RCP" onClick={handleProjectClick}/>
-                  <Chip className={classes.chip} label="HyperStduio" onClick={handleProjectClick}/>
-                  <Chip className={classes.chip} label="GripSensing" onClick={handleProjectClick}/>
-                  <Chip className={classes.chip} label="GripSensing" onClick={handleProjectClick}/>
-                  <Chip className={classes.chip} label="GripSensing" onClick={handleProjectClick}/>
+                  {projectData.map(data =>{
+                    return (<Chip className={classes.chip} key={data.key} label={data.label} onClick={()=>handleProjectClick(data.key)}/>)
+                  })}
                 </div>
               </div>
-
-              <GripSensing/>
+              <div>
+                <Allight/>
+                <GripSensing/>
+                <HyperStudio/>
+                <Portfolio/>
+              </div>
+              
               </GridItem>
               
             </GridContainer>

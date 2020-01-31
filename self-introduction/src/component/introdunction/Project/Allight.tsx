@@ -80,7 +80,7 @@ function getStepContent(step: number) {
     }
   }
 
-export default function GripSensing(props: any) {
+export default function Allight(props: any) {
     const classes = useStyles();
     const [activeStep, setActiveStep] = React.useState(0);
     const steps = getSteps();
@@ -98,69 +98,25 @@ export default function GripSensing(props: any) {
     return (
         <GridContainer justify="center">
             <GridItem xs={12} sm={12}>
-                <h3 className={classes.title}>GripSensing</h3>
+                <h3 className={classes.title}>Allihgt</h3>
                 <Button
                         variant="contained"
                         color="secondary"
                         size="small"
                         className={classes.videoButton}
-                        href={'https://www.youtube.com/watch?v=HpuazVu3mA0'}
+                        href={'https://www.youtube.com/watch?v=BD8aFohG8cg'}
                         target="_blank"
                         startIcon={<PlayArrowIcon />}
                 >
                     Watch Video
                 </Button>   
                 <p>
-                    소리 신호를 이용한 스마트폰 그립 감지 시스템{" "}
+                    스마트 전등제어 알림 서비스{" "}
                 </p>
             </GridItem>
             <GridItem xs={12} sm={12}>
                 <Chip className={classes.skillChip} variant="outlined" size="small" label="Android" color="primary" />
-                <Chip className={classes.skillChip}variant="outlined" size="small" label="SoundSignal Processing" color="primary" />
-                <Chip className={classes.skillChip} variant="outlined" size="small" label="machine learning" color="primary" />
-            </GridItem>
-            <GridItem xs={12} sm={12}>
-                <div className={classes.steperContainer}>
-                    <Stepper activeStep={activeStep} orientation="vertical">
-                        {steps.map((label, index) => (
-                        <Step key={label}>
-                            <StepLabel>{label}</StepLabel>
-                            <StepContent>
-                            <Typography>{getStepContent(index)}</Typography>
-                            <div className={classes.actionsContainer}>
-                                <div>
-                                <Button
-                                    disabled={activeStep === 0}
-                                    onClick={handleBack}
-                                    className={classes.button}
-                                >
-                                    Back
-                                </Button>
-                                <Button
-                                    variant="contained"
-                                    color="primary"
-                                    onClick={handleNext}
-                                    className={classes.button}
-                                >
-                                    {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-                                </Button>
-                                </div>
-                            </div>
-                            </StepContent>
-                        </Step>
-                        ))}
-                    </Stepper>
-                    {activeStep === steps.length && (
-                        <Paper square elevation={0} className={classes.resetContainer}>
-                        <Typography>All steps completed - you&apos;re finished</Typography>
-                        <Button onClick={handleReset} className={classes.button}>
-                            Reset
-                        </Button>
-                        </Paper>
-                    )}
-                </div>
-            </GridItem>
-            
+            </GridItem>      
         </GridContainer>
     );
 }
