@@ -56,6 +56,10 @@ const useStyles = makeStyles({
     skillChip : {
         margin : "5px"
     },
+    subTitle: {
+        textAlign: "center",
+        width: "100%"
+    },
 });
 
 function getSteps() {
@@ -116,7 +120,27 @@ export default function Allight(props: any) {
             </GridItem>
             <GridItem xs={12} sm={12}>
                 <Chip className={classes.skillChip} variant="outlined" size="small" label="Android" color="primary" />
-            </GridItem>      
+            </GridItem> 
+            <GridItem xs={12} sm={12}>
+                <Typography variant="h6" gutterBottom className={classes.subTitle}>
+                    Motivation
+                </Typography>
+
+                 <Typography variant="body2" gutterBottom>
+                    에트리 스마트가전(홈) IOT 서비스 공모전 제출물로, 스마트폰과 스마트전구를 연동하여 스마트폰으로 오는 알림들을 스마트전구를 통해 시각적으로 보여준다.
+                    IFTTT( If This, Then That )의 개념을 적용한 서비스이다. 예를들어, '메일이 오면 (If this) 빨간색 불빛으로 2번 깜박여줘 (Then That)'와 같은 기능을 실행 할 수 있다.
+                </Typography>
+            </GridItem>     
+
+            <GridItem xs={12} sm={12}>
+                <Typography variant="h6" gutterBottom className={classes.subTitle}>
+                    Result
+                </Typography>
+
+                 <Typography variant="body2" gutterBottom>
+                    에트리 스마트가전(홈) IOT 서비스 공모전 우수상 수상
+                </Typography>
+            </GridItem>     
         </GridContainer>
     );
 }

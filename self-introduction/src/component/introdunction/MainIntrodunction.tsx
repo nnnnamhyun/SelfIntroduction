@@ -184,7 +184,7 @@ export function MainIntrodunction(props : introdunctionProps) {
             <div className={classes.description}>
               <p>
                 {`사용자와 직접 Interaction 하는 Front-End 개발을 좋아합니다. UX/UI 개선을 좋아하며, 편리하지만 간결하고 예쁘게 만드는걸 좋아합니다.
-                대부분의 프로젝트에서 Front-end 개발을 맡아 하였습니다. 
+                Web Front-End 뿐만 아니라, Eclipse RCP, Android 등 다양한 플랫폼의 Front-End 개발 경험이 있습니다.
                 `}
               </p>
             </div>

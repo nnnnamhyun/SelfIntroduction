@@ -56,6 +56,10 @@ const useStyles = makeStyles({
     skillChip : {
         margin : "5px"
     },
+    subTitle: {
+        textAlign: "center",
+        width: "100%"
+    },
 });
 
 function getSteps() {
@@ -106,11 +110,22 @@ export default function HyperStudio(props: any) {
             <GridItem xs={12} sm={12}>
                 <Chip className={classes.skillChip} variant="outlined" size="small" label="TypeScript" color="primary" />
                 <Chip className={classes.skillChip}variant="outlined" size="small" label="React" color="primary" />
-                <Chip className={classes.skillChip} variant="outlined" size="small" label="inversify" color="primary" />
+                <Chip className={classes.skillChip} variant="outlined" size="small" label="Inversify" color="primary" />
                 <Chip className={classes.skillChip} variant="outlined" size="small" label="Theia" color="primary" />
                 <Chip className={classes.skillChip} variant="outlined" size="small" label="BPMN.io" color="primary" />
                 <Chip className={classes.skillChip}variant="outlined" size="small" label="Node.js" color="primary" />
-            </GridItem>            
+            </GridItem>      
+
+             <GridItem xs={12} sm={12}>
+                <Typography variant="h6" gutterBottom className={classes.subTitle}>
+                    Motivation
+                </Typography>
+
+                 <Typography variant="body2" gutterBottom>
+                    Theia 프레임워크 기반으로 개발되었으며, SPA 형식의 웹 스튜디오이다.
+                    
+                </Typography>
+            </GridItem>           
         </GridContainer>
     );
 }
