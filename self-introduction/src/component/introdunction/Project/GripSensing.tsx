@@ -90,6 +90,7 @@ const useStyles = makeStyles({
         height: "auto"
     },
     video : {
+        width: "100%",
         maxWidth : "500px",
         height:"auto"
     }
@@ -249,6 +250,8 @@ export default function GripSensing(props: any) {
                 <Chip className={classes.skillChip}variant="outlined" size="small" label="SoundSignal Processing" color="primary" />
                 <Chip className={classes.skillChip} variant="outlined" size="small" label="LIBSVM" color="primary" />
             </GridItem>
+
+            <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
             
             <GridItem xs={12} sm={12}>
                 <Typography variant="h6" gutterBottom className={classes.subTitle}>
@@ -272,6 +275,7 @@ export default function GripSensing(props: any) {
                     'SmartGrip'은 스마트폰에 추가적인 하드웨어 없이 기존의 스피커와 마이크로폰을 이용하여 사용자의 그립을 구분하는 시스템이며 이를 이를 활용한 간단한 인터페이스를 제공한다.
                 </Typography>
             </GridItem>
+            <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
             <GridItem xs={12} sm={12}>
                 <Typography variant="h6" gutterBottom className={classes.subTitle}>
                     Principle               
@@ -314,7 +318,7 @@ export default function GripSensing(props: any) {
             </GridItem>
 
 
-
+            <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
             <GridItem xs={12} sm={12}>
                 <Typography variant="h6" gutterBottom className={classes.subTitle}>
                     Usage Example

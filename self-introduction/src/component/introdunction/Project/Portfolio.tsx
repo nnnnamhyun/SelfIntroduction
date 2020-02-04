@@ -56,6 +56,10 @@ const useStyles = makeStyles({
     skillChip : {
         margin : "5px"
     },
+    subTitle: {
+        textAlign: "center",
+        width: "100%"
+    }
 });
 
 function getSteps() {
@@ -105,10 +109,24 @@ export default function Portfolio(props: any) {
             </GridItem>
             <GridItem xs={12} sm={12}>
                 <Chip className={classes.skillChip} variant="outlined" size="small" label="TypeScript" color="primary" />
+                <Chip className={classes.skillChip}variant="outlined" size="small" label="HTML" color="primary" />
+                <Chip className={classes.skillChip}variant="outlined" size="small" label="CSS" color="primary" />
                 <Chip className={classes.skillChip}variant="outlined" size="small" label="React" color="primary" />
                 <Chip className={classes.skillChip}variant="outlined" size="small" label="React-Redux" color="primary" />
                 <Chip className={classes.skillChip}variant="outlined" size="small" label="Node.js" color="primary" />
-            </GridItem>            
+            </GridItem>
+            <GridItem xs={12} sm={12}>
+                <Typography variant="h6" gutterBottom className={classes.subTitle}>
+                    To Do               
+                </Typography>
+                <Typography variant="body2" gutterBottom>
+                    프레임워크화.
+                    사용자가 입력한 Data들을 Rendering 하여, 해당 사용자의 포트폴리오를 만들어 주는 사이트로 변경.
+                    React-Redux 적용.
+                </Typography>
+            </GridItem>
+            
+            
         </GridContainer>
     );
 }

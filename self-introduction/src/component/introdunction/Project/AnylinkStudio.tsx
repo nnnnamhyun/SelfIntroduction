@@ -84,7 +84,7 @@ function getStepContent(step: number) {
     }
   }
 
-export default function HyperStudio(props: any) {
+export default function AnylinkStudio(props: any) {
     const classes = useStyles();
     const [activeStep, setActiveStep] = React.useState(0);
     const steps = getSteps();
@@ -102,50 +102,29 @@ export default function HyperStudio(props: any) {
     return (
         <GridContainer justify="center">
             <GridItem xs={12} sm={12}>
-                <h3 className={classes.title}>HyperStudio</h3>  
+                <h3 className={classes.title}>Anylink Studio</h3>  
                 <p>
-                    Theia Framework 기반의 웹 스튜디오{" "}
+                    Eclipse RCP기반의 Anylink 스튜디오{" "}
                 </p>
             </GridItem>
             <GridItem xs={12} sm={12}>
-                <Chip className={classes.skillChip} variant="outlined" size="small" label="TypeScript" color="primary" />
-                <Chip className={classes.skillChip}variant="outlined" size="small" label="JavaScript" color="primary" />
-                <Chip className={classes.skillChip}variant="outlined" size="small" label="HTML" color="primary" />
-                <Chip className={classes.skillChip}variant="outlined" size="small" label="CSS" color="primary" />
-                <Chip className={classes.skillChip}variant="outlined" size="small" label="React" color="primary" />
-                <Chip className={classes.skillChip} variant="outlined" size="small" label="Inversify" color="primary" />
-                <Chip className={classes.skillChip} variant="outlined" size="small" label="Theia" color="primary" />
-                <Chip className={classes.skillChip} variant="outlined" size="small" label="BPMN.io" color="primary" />
-                <Chip className={classes.skillChip}variant="outlined" size="small" label="Node.js" color="primary" />
+                <Chip className={classes.skillChip} variant="outlined" size="small" label="Java" color="primary" />
+                <Chip className={classes.skillChip}variant="outlined" size="small" label="Eclipse RCP" color="primary" />
+                <Chip className={classes.skillChip} variant="outlined" size="small" label="SWT" color="primary" />
             </GridItem>      
 
             <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
             
              <GridItem xs={12} sm={12}>
                 <Typography variant="h6" gutterBottom className={classes.subTitle}>
-                    HyperStudio
+                    Anylink
                 </Typography>
 
                  <Typography variant="body2" gutterBottom>
-                    Anylink8(가칭)의 모듈중 하나로 기존 AnylinkStudio의 웹 버전입니다. 제품의 설계단계부터 참여하였습니다.
-                    오픈소스인 Theia Framework를 기반으로 extension 형식으로 개발하였고, React를 이용한 SPA 형식의 웹 어플리케이션입니다.
-            
-                    <pre/>
-                    해당 제품의 기술적 특징은 다음과 같습니다. 
-                    <pre/>
-                    1. TypeScript를 이용한 OOP프로그래밍. 그리고 이로 인한 유지보수의 쉬움 <pre/>
-                    2. Inversify를 이용한 Singleton 패턴을 적극활용한 하드웨어 자원 절약 <pre/>
-                    3. React를 이용한 효과적인 웹 페이지 렌더링 <pre/>
-                    4. open soure인 BPMN.io를 확장하여 개발한 Flow Editor. <pre/>
-                    5. 기존 제품대비 향상된 UX/UI <pre/>    
+                    TMAX에서 개발한 통합 인터페이스 솔루션. 기업 내부 시스템간의 연계, 외부기관 연계, 그리고 기업에서 관리하는 각종 채널까지 연계하는 기능 제공합니다. 
+                    Anylink는 <b>엔진, 어뎁터, 스튜디오</b>로 구성되어 있으며 본인은 <b>스튜디오</b> 개발 및 유지/보수에 기여하였습니다.<br/>
+                    스튜디오는 엔진과 어뎁터에서 사용하는 리소스들을 개발하는 툴로, Eclipse RCP 기반의 GUI 프로그램입니다. Plugin 방식으로 개발되었으며, SWT를 이용하여 개발되었습니다.
 
-                    해당 제품 설계의 특징은 다음과 같습니다.
-                    <pre/>
-                    1. Database를 이용한 형상 관리. 이로 인한 Data 가공/검색의 편리함 <pre/>
-                    2. Inversify를 이용한 Singleton 패턴을 적극활용한 하드웨어 자원 절약 <pre/>
-                    3. React를 이용한 효과적인 웹 페이지 렌더링 <pre/>
-                    4. open soure인 BPMN.io를 확장하여 개발한 Flow Editor. <pre/>
-                    5. 기존 제품대비 향상된 UX/UI <pre/>         
                 </Typography>
             </GridItem>           
         </GridContainer>

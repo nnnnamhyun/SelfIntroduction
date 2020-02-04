@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import GridContainer from '../../Grid/GridContainer';
 import GridItem from '../../Grid/GridItem';
-import { Stepper, Step, StepLabel, StepContent, Typography, Button, Paper, Chip, MobileStepper } from '@material-ui/core';
+import { Stepper, Step, StepLabel, StepContent, Typography, Button, Paper, Chip, MobileStepper, Divider } from '@material-ui/core';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import SwipeableViews from 'react-swipeable-views';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
@@ -63,16 +63,25 @@ const useStyles = makeStyles({
         textAlign: "center",
         width: "100%"
     },video : {
+        margin: "0 auto",
         maxWidth : "100%",
         height:"auto"
-    }
+    },
+    appDetail: {
+        maxWidth:"700px",
+        margin: "0 auto",
+    },
+    appDescription: {
+        margin: "1.071rem auto 0",
+        textAlign: "center"
+    },
 });
 
 const tutorialSteps = [
     {
       label: '앱 실행화면',
       video: require('../../../assets/video/allight/allight1.mp4'),
-      description : '앱 첫 실행시 나타나는 화면입니다.'
+      description : '앱 초기 실행화면. Splash 이미지가 나온 후, 로그인과 회원가입을 할 수 있는 위젯이 나온다.'
     },
     {
       label: '조명 On/Off',
@@ -118,7 +127,7 @@ export default function Allight(props: any) {
     return (
         <GridContainer justify="center">
             <GridItem xs={12} sm={12}>
-                <h3 className={classes.title}>Allihgt</h3>
+                <h3 className={classes.title}>Allight</h3>
                 <Button
                         variant="contained"
                         color="secondary"
@@ -140,6 +149,9 @@ export default function Allight(props: any) {
             <GridItem xs={12} sm={12}>
                 <Chip className={classes.skillChip} variant="outlined" size="small" label="Android" color="primary" />
             </GridItem> 
+
+            <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
+
             <GridItem xs={12} sm={12}>
                 <Typography variant="h6" gutterBottom className={classes.subTitle}>
                     Motivation
@@ -150,7 +162,7 @@ export default function Allight(props: any) {
                     IFTTT( If This, Then That )의 개념을 적용한 서비스이다. 예를들어, '메일이 오면 (If this) 빨간색 불빛으로 2번 깜박여줘 (Then That)'와 같은 기능을 실행 할 수 있다.
                 </Typography>
             </GridItem>     
-
+            <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
             <GridItem xs={12} sm={12}>
                 <Typography variant="h6" gutterBottom className={classes.subTitle}>
                     Usage
@@ -158,58 +170,64 @@ export default function Allight(props: any) {
                 {/* <Paper square elevation={0}>
                     <Typography>etaet</Typography>
                 </Paper> */}
-                <SwipeableViews
-                    axis={'x-reverse'}
-                    index={activeStep}
-                    onChangeIndex={handleStepChange}
-                    enableMouseEvents
-                >
-                    {tutorialSteps.map((step, index) => (
-                    
-
-                    <div key={step.label}>
-                        <GridContainer style={{margin:'0px'}} justify="flex-start">
-                        <video
-                            className = {classes.video}
-                            preload="auto" 
-                            playsinline={true} 
-                            autoPlay={true}
-                            loop={true}
-                            data-autoplay-desktop="true" 
-                            data-autoplay-portrait="true" 
-                            data-autoplay-mobile="true" 
-                            poster="" 
-                            muted={true}
-                            src={step.video} data-object-fit="cover">
-                        </video>
-                        <GridItem xs={12} sm={5}>
-                        <div>
-                        {step.description}
-                        </div>
-                        </GridItem>
-                        </GridContainer>
+                <div className={classes.appDetail}>
+                    <SwipeableViews
+                    className={classes.subTitle}
+                        axis={'x-reverse'}
+                        index={activeStep}
+                        onChangeIndex={handleStepChange}
+                        enableMouseEvents
+                    >
+                        {tutorialSteps.map((step, index) => (
                         
-                    </div>
-                    ))}
-                </SwipeableViews>
-                <MobileStepper
-                    steps={maxSteps}
-                    position="static"
-                    variant="text"
-                    activeStep={activeStep}
-                    nextButton={
-                    <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-                        Next
-                        {<KeyboardArrowRight />}
-                    </Button>
-                    }
-                    backButton={
-                    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                        {<KeyboardArrowLeft />}
-                        Back
-                    </Button>
-                    }
-                />
+
+                        <div key={step.label}>
+                            <GridContainer style={{margin:'0px'}} justify="flex-start">
+                            <video
+                                className = {classes.video}
+                                preload="auto" 
+                                playsinline={true} 
+                                autoPlay={true}
+                                loop={true}
+                                data-autoplay-desktop="true" 
+                                data-autoplay-portrait="true" 
+                                data-autoplay-mobile="true" 
+                                poster="" 
+                                muted={true}
+                                src={step.video} data-object-fit="cover">
+                            </video>
+
+                            <div className = {classes.appDescription}>
+                            <Typography variant="body2" gutterBottom>
+                                {step.description}
+                            </Typography>
+                            
+                            </div>
+                
+                            </GridContainer>
+                            
+                        </div>
+                        ))}
+                    </SwipeableViews>
+                    <MobileStepper
+                        steps={maxSteps}
+                        position="static"
+                        variant="text"
+                        activeStep={activeStep}
+                        nextButton={
+                        <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+                            Next
+                            {<KeyboardArrowRight />}
+                        </Button>
+                        }
+                        backButton={
+                        <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                            {<KeyboardArrowLeft />}
+                            Back
+                        </Button>
+                        }
+                    />
+                </div>
             </GridItem>     
 
 

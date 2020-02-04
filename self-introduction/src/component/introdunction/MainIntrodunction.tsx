@@ -12,7 +12,11 @@ import GripSensing from './Project/GripSensing';
 import HyperStudio from './Project/HyperStudio';
 import Allight from './Project/Allight';
 import Portfolio from './Project/Portfolio';
+import AnylinkStudio from './Project/AnylinkStudio';
 
+import SchoolRoundedIcon from '@material-ui/icons/SchoolRounded';
+import BusinessRoundedIcon from '@material-ui/icons/BusinessRounded';
+import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 const useStyles = makeStyles(theme => ({
   main: {
     background: "#FFFFFF",
@@ -136,12 +140,12 @@ export function MainIntrodunction(props : introdunctionProps) {
   }
 
   const projectData = [
-      {key:0,label:'Allight', node:<Allight/>},
-      {key:1,label:'GripSensing',  node:<GripSensing/>},
-      {key:2,label:'Anylink Studio', node:<HyperStudio/>},
-      {key:3,label:'HyperStudio', node:<HyperStudio/>},
-      {key:4,label:'Portfoilo(...ing)', node:<Portfolio/>},
-      {key:5,label:'SendInstead (...ing)', node:<Portfolio/>},
+      {key:0,label:'Allight', node:<Allight/>,icon:<SchoolRoundedIcon fontSize='small'/>},
+      {key:1,label:'GripSensing',  node:<GripSensing/>,icon:<SchoolRoundedIcon fontSize='small'/>},
+      {key:2,label:'Anylink Studio', node:<AnylinkStudio/> ,icon:<BusinessRoundedIcon fontSize='small'/>},
+      {key:3,label:'HyperStudio', node:<HyperStudio/> ,icon:<BusinessRoundedIcon fontSize='small'/>},
+      {key:4,label:'Portfoilo(...ing)', node:<Portfolio/> ,icon:<AccountCircleRoundedIcon fontSize='small'/>},
+      {key:5,label:'SendInstead (...ing)', node:<Portfolio/> ,icon:<AccountCircleRoundedIcon fontSize='small'/>},
     ];
 
   return (
@@ -199,7 +203,10 @@ export function MainIntrodunction(props : introdunctionProps) {
                 <h3 className={classes.title}>Project</h3>
                 <div>
                   {projectData.map(data =>{
-                    return (<Chip className={classes.chip} key={data.key} label={data.label} onClick={()=>handleProjectClick(data.key)}/>)
+                    return (data.key == activeProject)
+                    ?<Chip className={classes.chip} key={data.key} label={data.label} icon={data.icon} color="primary" onClick={()=>handleProjectClick(data.key)}/> 
+                    :<Chip className={classes.chip} key={data.key} label={data.label} icon={data.icon} onClick={()=>handleProjectClick(data.key)}/>
+
                   })}
                 </div>
               </div>
