@@ -121,6 +121,8 @@ export interface introdunctionProps {
 export function MainIntrodunction(props : introdunctionProps) {
 
   const classes = useStyles();
+  const [activeProject, setActiveProject] = React.useState(0);
+
   const imageClasses = classNames(
     classes.imgRaised,
     classes.imgRoundedCircle,
@@ -129,17 +131,19 @@ export function MainIntrodunction(props : introdunctionProps) {
   const { post } = props;
 
   const handleProjectClick = (key:number) => {
+    setActiveProject(key);
     console.info(key);
   }
 
   const projectData = [
-      {key:0,label:'Allight'},
-      {key:1,label:'GripSensing'},
-      {key:2,label:'Anylink Studio'},
-      {key:4,label:'HyperStudio'},
-      {key:5,label:'Portfoilo(...ing)'},
-      {key:6,label:'SendInstead (...ing)'}
+      {key:0,label:'Allight', node:<Allight/>},
+      {key:1,label:'GripSensing',  node:<GripSensing/>},
+      {key:2,label:'Anylink Studio', node:<HyperStudio/>},
+      {key:3,label:'HyperStudio', node:<HyperStudio/>},
+      {key:4,label:'Portfoilo(...ing)', node:<Portfolio/>},
+      {key:5,label:'SendInstead (...ing)', node:<Portfolio/>},
     ];
+
   return (
     <div>
       <Header
@@ -200,10 +204,7 @@ export function MainIntrodunction(props : introdunctionProps) {
                 </div>
               </div>
               <div>
-                <Allight/>
-                <GripSensing/>
-                <HyperStudio/>
-                <Portfolio/>
+                {projectData[activeProject].node}
               </div>
               
               </GridItem>

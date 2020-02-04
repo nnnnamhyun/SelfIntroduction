@@ -233,6 +233,13 @@ export default function GripSensing(props: any) {
                 <p>
                     소리 신호를 이용한 스마트폰 그립 감지 시스템{" "}
                 </p>
+                <Typography variant="caption" display="block" gutterBottom>
+                    Towards grip sensing for commodity smartphones through acoustic signature (UbiComp '17 2017)
+                </Typography>
+                <Typography variant="caption" display="block" gutterBottom>
+                    SmartGrip : grip sensing system for commodity mobile devices through sound signals (Personal and Ubiquitous Computing '11 2019)
+                </Typography>
+
             </GridItem>
             
             <GridItem xs={12} sm={12}>
