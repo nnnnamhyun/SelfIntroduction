@@ -186,15 +186,11 @@ export default function Allight(props: any) {
                             <video
                                 className = {classes.video}
                                 preload="auto" 
-                                playsinline={true} 
+                                playsInline={true} 
                                 autoPlay={true}
-                                loop={true}
-                                data-autoplay-desktop="true" 
-                                data-autoplay-portrait="true" 
-                                data-autoplay-mobile="true" 
-                                poster="" 
                                 muted={true}
-                                src={step.video} data-object-fit="cover">
+                                loop={true}
+                                src={step.video}>
                             </video>
 
                             <div className = {classes.appDescription}>

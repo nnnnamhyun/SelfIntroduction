@@ -87,6 +87,7 @@ const useStyles = makeStyles({
     imgPrinciple: {
         margin: "15px 15px 0px 15px",
         maxWidth: "350px",
+        width: "100%",
         height: "auto"
     },
     video : {
@@ -152,15 +153,11 @@ export default function GripSensing(props: any) {
                 <video
                     className = {classes.video}
                     preload="auto" 
-                    playsinline={true} 
+                    playsInline={true} 
                     autoPlay={true}
-                    loop={true}
-                    data-autoplay-desktop="true" 
-                    data-autoplay-portrait="true" 
-                    data-autoplay-mobile="true" 
-                    poster="" 
                     muted={true}
-                    src={getStepContentVideo(index)} data-object-fit="cover">
+                    loop={true}
+                    src={getStepContentVideo(index)}>
                 </video>
             
                 <Typography variant="body2" >{getStepContentDetailed(index)}</Typography>
