@@ -107,6 +107,9 @@ const useStyles = makeStyles(theme => ({
       transform: "translate3d(0, -50%, 0)"
     }
   },
+  skill: {
+    width: "100%",
+  },
   margin5: {
     margin: "5px"
   }
@@ -155,8 +158,7 @@ export function MainIntrodunction(props : introdunctionProps) {
         brand = "NamHyun"
         rightLinks = { <div></div>}
         changeColorOnScroll={{
-          height: 200,
-          color: "white"
+          height: 250
         }}
         fixed ={true}
         absolute = {false}
@@ -170,18 +172,18 @@ export function MainIntrodunction(props : introdunctionProps) {
               <GridItem xs={12} sm={12} md={6}>
                 <div className={classes.profile}>
                   <div>
-                    <img src={profile} alt="..." className={imageClasses} />
+                    <img src={profile} alt="..." className={imageClasses}  id={"introduction"}/>
                   </div>
                   <div className={classes.name}>
                     <h3 className={classes.title}>NamHyun Kim</h3>
                     <h6 className={classes.job}> DVELOPER</h6>
-                    <Button className={classes.margin5}>
+                    <Button className={classes.margin5} target={"_blank"} href={"mailto: knh6210@gmail.com"}>
                       <i className={"fas fa-envelope"} />
                     </Button>
-                    <Button className={classes.margin5}>
+                    <Button className={classes.margin5} target={"_blank"}  href={'https://www.instagram.com/knh0126'}>
                       <i className={"fab fa-instagram"} />
                     </Button>
-                    <Button className={classes.margin5}>
+                    <Button className={classes.margin5} target={"_blank"}  href={'https://www.linkedin.com/in/%EB%82%A8%ED%98%84-%EA%B9%80-2a8644167'}>
                       <i className={"fab fa-linkedin"} />
                     </Button>
                   </div>
@@ -189,15 +191,35 @@ export function MainIntrodunction(props : introdunctionProps) {
               </GridItem>
             
             </GridContainer>
-            <div className={classes.description}>
+            <div className={classes.description} >
               <p>
                 {`사용자와 직접 Interaction 하는 Front-End 개발을 좋아합니다. UX/UI 개선을 좋아하며, 편리하지만 간결하고 예쁘게 만드는걸 좋아합니다.
                 Web Front-End 뿐만 아니라, Eclipse RCP, Android 등 다양한 플랫폼의 Front-End 개발 경험이 있습니다.
                 `}
               </p>
-            </div>
+            </div>            
+
+            <GridContainer justify="center" id={"skill"}> 
+              <GridItem xs={12} sm={12}>
+              <div className={classes.project}>
+                <h3 className={classes.title}>Skill</h3>
+                <div>
+                  <p>JAVA, TypeScript, JavaScript, C 등 다양한 언어를 이해하고 사용할 수 있습니다.</p>
+                  <p>Web, Android, Eclipse RCP등 다양한 플랫폼의 프론트엔드 개발 경험이 있습니다.</p>
+                  <p>HTML, CSS의 표준을 준수하며 개발할 수 있습니다.</p>
+                  <p>Grunt, Webpack등의 번들링 툴을 이용할 수 있습니다.</p>
+                  <p>Node.js의 express를 이용한 backend 개발 경험이 있습니다.</p>
+                  <p>React, React-Redux 사용에 능숙합니다.</p>
+                  <p>다양한 오픈소스 사용에 능숙하며, 기존 플랫폼에 쉽게 적용할 수 있습니다.</p>
+                  <p>Docker, 쿠버네티스를 이해하고 사용할 수 있습니다.</p>
+                  <p>OOP프로그래밍에 능숙하며, 다양한 디자인패턴을 이해하고 사용할 수 있습니다.</p>
+                </div>
+              </div>              
+              </GridItem>
+              
+            </GridContainer>
             
-            <GridContainer justify="center">
+            <GridContainer justify="center" id={"project"}>
               <GridItem xs={12} sm={12}>
               <div className={classes.project}>
                 <h3 className={classes.title}>Project</h3>
