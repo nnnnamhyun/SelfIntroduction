@@ -22,6 +22,20 @@ const useStyles = makeStyles({
         minHeight: "32px",
         fontSize : "25px",
     },
+    duration: {
+        width: "100%",
+        textAlign: "center",
+        color: "#29088A",
+        margin: "1.75rem 0 0.875rem",
+        textDecoration: "none",
+        fontWeight: 100,
+        fontFamily: `"Roboto Slab", "Times New Roman", serif`,
+        display: "inline-block",
+        position: "relative",
+        marginTop: "0px",
+        minHeight: "32px",
+        fontSize : "15px",
+    },
     description : {
         display: "inline-block",
         position: "relative",
@@ -115,8 +129,14 @@ export default function HyperStudio(props: any) {
              <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
             <GridItem xs={"auto"} sm={3}>
                 <GridItem xs={12} sm={12}>
-                    <h3 className={classes.title}>HyperStudio</h3>  
+                    <Typography variant="h6" gutterBottom className={classes.title}>
+                        HyperStudio
+                    </Typography>   
+                   
                 </GridItem>
+                <Typography variant="h6" gutterBottom className={classes.duration}>
+                        2019.02 ~ ing
+                    </Typography>
             </GridItem>
             <GridItem xs={"auto"} sm={9}>
                 <GridItem xs={12} sm={12}>

@@ -22,6 +22,20 @@ const useStyles = makeStyles({
         minHeight: "32px",
         fontSize : "25px",
     },
+    duration: {
+        width: "100%",
+        textAlign: "center",
+        color: "#29088A",
+        margin: "1.75rem 0 0.875rem",
+        textDecoration: "none",
+        fontWeight: 100,
+        fontFamily: `"Roboto Slab", "Times New Roman", serif`,
+        display: "inline-block",
+        position: "relative",
+        marginTop: "0px",
+        minHeight: "32px",
+        fontSize : "15px",
+    },
     description : {
         display: "inline-block",
         position: "relative",
@@ -117,6 +131,9 @@ export default function AnylinkStudio(props: any) {
                 <GridItem xs={12} sm={12}>
                     <Typography variant="h6" gutterBottom className={classes.title}>
                         Anylink7 Studio
+                    </Typography>
+                    <Typography variant="h6" gutterBottom className={classes.duration}>
+                        2018.02 ~ 2019.07
                     </Typography>
                 </GridItem>
             </GridItem>
