@@ -62,6 +62,15 @@ const useStyles = makeStyles({
         textAlign: "center",
         width: "100%"
     },
+    li :{
+        "&:before": {
+            position:"absolute",
+            left:0,
+            display:'inline-block',
+            content:"•",
+            color : "#3a7bd5"
+        },
+    }
 });
 
 function getSteps() {
@@ -118,7 +127,9 @@ export default function AnylinkStudio(props: any) {
                     </Typography>
 
                     <Typography variant="body1" gutterBottom>         
-                        Eclipse RCP기반의 Anylink 스튜디오{" "}
+                        TMAX에서 개발한 통합 인터페이스 솔루션. 기업 내부 시스템간의 연계, 외부기관 연계, 그리고 기업에서 관리하는 각종 채널까지 연계하는 기능 제공합니다.
+                        Anylink는 <b>엔진, 어뎁터, 스튜디오</b>로 구성되어 있으며 본인은 <b>스튜디오</b> 개발 및 유지/보수에 기여하였습니다.<br/>
+                        스튜디오는 엔진과 어뎁터에서 사용하는 리소스들을 개발하는 툴입니다.
                    
                     </Typography>
                    
@@ -131,13 +142,24 @@ export default function AnylinkStudio(props: any) {
                 
                 <GridItem xs={12} sm={12}>
                     <Typography variant="h6" gutterBottom className={classes.subTitle}>
-                        Anylink
+                        What did I do
                     </Typography>
 
-                    <Typography variant="body2" gutterBottom>
-                        TMAX에서 개발한 통합 인터페이스 솔루션. 기업 내부 시스템간의 연계, 외부기관 연계, 그리고 기업에서 관리하는 각종 채널까지 연계하는 기능 제공합니다. 
-                        Anylink는 <b>엔진, 어뎁터, 스튜디오</b>로 구성되어 있으며 본인은 <b>스튜디오</b> 개발 및 유지/보수에 기여하였습니다.<br/>
-                        스튜디오는 엔진과 어뎁터에서 사용하는 리소스들을 개발하는 툴로, Eclipse RCP 기반의 GUI 프로그램입니다. Plugin 방식으로 개발되었으며, SWT를 이용하여 개발되었습니다.
+                    <Typography variant="body1" gutterBottom>         
+                    <ul>
+                        <li className={classes.li}>
+                            주변환경의 영향을 최소화 할 수 있는 소리 신호 제작
+                        </li>
+                        <li className={classes.li}>
+                            MatchedFilter, Band Pass Filter, FFT 등을 이용한 소리 신호 분석
+                        </li> 
+                        <li className={classes.li}>
+                            Lib-Ssvm을 이용한 Multi-class svm을 구현하여 여러가지 소리 신호 분류
+                        </li>  
+                        <li className={classes.li}>
+                            안드로이드 Service를 이용한 Backgorund 어플리케이션 개발
+                        </li>   
+                    </ul>
 
                     </Typography>
                 </GridItem>          

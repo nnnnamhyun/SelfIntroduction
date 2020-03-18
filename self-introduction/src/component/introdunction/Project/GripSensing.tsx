@@ -97,6 +97,15 @@ const useStyles = makeStyles({
         width: "100%",
         maxWidth : "500px",
         height:"auto"
+    },
+    li :{
+        "&:before": {
+            position:"absolute",
+            left:0,
+            display:'inline-block',
+            content:"•",
+            color : "#3a7bd5"
+        },
     }
 
 });
@@ -327,6 +336,33 @@ export default function GripSensing(props: any) {
                         </GridItem>
                 </GridItem>
 
+                <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
+
+                <GridItem xs={12} sm={12}>
+    
+                    <Typography variant="h6" gutterBottom className={classes.subTitle}>
+                        What did I do
+                    </Typography>
+
+                    <Typography variant="body1" gutterBottom>         
+                    <ul>
+                        <li className={classes.li}>
+                            주변환경의 영향을 최소화 할 수 있는 소리 신호 제작
+                        </li>
+                        <li className={classes.li}>
+                            MatchedFilter, Band Pass Filter, FFT 등을 이용한 소리 신호 분석
+                        </li> 
+                        <li className={classes.li}>
+                            Lib-Ssvm을 이용한 Multi-class svm을 구현하여 여러가지 소리 신호 분류
+                        </li>  
+                        <li className={classes.li}>
+                            안드로이드 Service를 이용한 Backgorund 어플리케이션 개발
+                        </li>   
+                    </ul>
+
+                    </Typography>
+         
+                </GridItem> 
 
                 <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
                 <GridItem xs={12} sm={12}>
