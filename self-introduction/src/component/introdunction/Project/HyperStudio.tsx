@@ -9,7 +9,9 @@ import PlayArrowIcon from '@material-ui/icons/PlayArrow';
   
 const useStyles = makeStyles({
     title: {
-        color: "#3C4858",
+        width: "100%",
+        textAlign: "center",
+        color: "#29088A",
         margin: "1.75rem 0 0.875rem",
         textDecoration: "none",
         fontWeight: 700,
@@ -59,7 +61,16 @@ const useStyles = makeStyles({
     subTitle: {
         textAlign: "center",
         width: "100%"
-    },
+    }, 
+    li :{
+        "&:before": {
+            position:"absolute",
+            left:0,
+            display:'inline-block',
+            content:"•",
+            color : "#3a7bd5"
+        },
+    }
 });
 
 function getSteps() {
@@ -101,53 +112,71 @@ export default function HyperStudio(props: any) {
       };
     return (
         <GridContainer justify="center">
-            <GridItem xs={12} sm={12}>
-                <h3 className={classes.title}>HyperStudio</h3>  
-                <p>
-                    Theia Framework 기반의 웹 스튜디오{" "}
-                </p>
+             <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
+            <GridItem xs={"auto"} sm={3}>
+                <GridItem xs={12} sm={12}>
+                    <h3 className={classes.title}>HyperStudio</h3>  
+                </GridItem>
             </GridItem>
-            <GridItem xs={12} sm={12}>
-                <Chip className={classes.skillChip} variant="outlined" size="small" label="TypeScript" color="primary" />
-                <Chip className={classes.skillChip}variant="outlined" size="small" label="JavaScript" color="primary" />
-                <Chip className={classes.skillChip}variant="outlined" size="small" label="HTML" color="primary" />
-                <Chip className={classes.skillChip}variant="outlined" size="small" label="CSS" color="primary" />
-                <Chip className={classes.skillChip}variant="outlined" size="small" label="React" color="primary" />
-                <Chip className={classes.skillChip} variant="outlined" size="small" label="Inversify" color="primary" />
-                <Chip className={classes.skillChip} variant="outlined" size="small" label="Theia" color="primary" />
-                <Chip className={classes.skillChip} variant="outlined" size="small" label="BPMN.io" color="primary" />
-                <Chip className={classes.skillChip}variant="outlined" size="small" label="Node.js" color="primary" />
-            </GridItem>      
+            <GridItem xs={"auto"} sm={9}>
+                <GridItem xs={12} sm={12}>
+                    <Typography variant="h6" gutterBottom className={classes.subTitle}>
+                        Description
+                    </Typography>
+                    <Typography variant="body1" gutterBottom>         
+                    Anylink (엔진, 게이트웨이, 스튜디오, 마스터) 신 제품의 스튜디오 모듈. Anylink 신제품의 설계부터 참여하였습니다.
+                        그 중 Studio 프론트엔드 혼자 맡아 개발하였으며, 2019년 12월경에 1차적으로 릴리즈 하였습니다.{" "}
+                    </Typography>
+                </GridItem>
 
-            <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
-            
-             <GridItem xs={12} sm={12}>
-                <Typography variant="h6" gutterBottom className={classes.subTitle}>
-                    HyperStudio
-                </Typography>
+                   
+                <GridItem xs={12} sm={12}>
+                    <Chip className={classes.skillChip} variant="outlined" size="small" label="TypeScript" color="primary" />
+                    <Chip className={classes.skillChip}variant="outlined" size="small" label="JavaScript" color="primary" />
+                    <Chip className={classes.skillChip}variant="outlined" size="small" label="HTML" color="primary" />
+                    <Chip className={classes.skillChip}variant="outlined" size="small" label="CSS" color="primary" />
+                    <Chip className={classes.skillChip}variant="outlined" size="small" label="React" color="primary" />
+                    <Chip className={classes.skillChip} variant="outlined" size="small" label="Inversify" color="primary" />
+                    <Chip className={classes.skillChip} variant="outlined" size="small" label="Theia" color="primary" />
+                    <Chip className={classes.skillChip} variant="outlined" size="small" label="BPMN.io" color="primary" />
+                    <Chip className={classes.skillChip}variant="outlined" size="small" label="Node.js" color="primary" />
+                    <Chip className={classes.skillChip}variant="outlined" size="small" label="Express" color="primary" />
+                </GridItem>      
 
-                 <Typography variant="body2" gutterBottom>
-                    Anylink8(가칭)의 모듈중 하나로 기존 AnylinkStudio의 웹 버전입니다. 제품의 설계단계부터 참여하였습니다.
-                    오픈소스인 Theia Framework를 기반으로 extension 형식으로 개발하였고, React를 이용한 SPA 형식의 웹 어플리케이션입니다.
-            
-                    <pre/>
-                    해당 제품의 기술적 특징은 다음과 같습니다. 
-                    <pre/>
-                    1. TypeScript를 이용한 OOP프로그래밍. 그리고 이로 인한 유지보수의 쉬움 <pre/>
-                    2. Inversify를 이용한 Singleton 패턴을 적극활용한 하드웨어 자원 절약 <pre/>
-                    3. React를 이용한 효과적인 웹 페이지 렌더링 <pre/>
-                    4. open soure인 BPMN.io를 확장하여 개발한 Flow Editor. <pre/>
-                    5. 기존 제품대비 향상된 UX/UI <pre/>    
+                <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
+                
+                <GridItem xs={12} sm={12}>
+                    <Typography variant="h6" gutterBottom className={classes.subTitle}>
+                        What did I do
+                    </Typography>
 
-                    해당 제품 설계의 특징은 다음과 같습니다.
-                    <pre/>
-                    1. Database를 이용한 형상 관리. 이로 인한 Data 가공/검색의 편리함 <pre/>
-                    2. Inversify를 이용한 Singleton 패턴을 적극활용한 하드웨어 자원 절약 <pre/>
-                    3. React를 이용한 효과적인 웹 페이지 렌더링 <pre/>
-                    4. open soure인 BPMN.io를 확장하여 개발한 Flow Editor. <pre/>
-                    5. 기존 제품대비 향상된 UX/UI <pre/>         
-                </Typography>
-            </GridItem>           
+                    <Typography variant="body1" gutterBottom>         
+                    <ul>
+                        <li className={classes.li}>
+                            Theia Framework를 이용한 Web형식의 Studio 개발
+                        </li>
+                        <li className={classes.li}>
+                            React 컴포넌트 계층 구조 디자인 및 이를 이용한 리소스 에디터 페이지 개발
+                        </li>
+                        <li className={classes.li}>
+                            TypeScript를 이용한 OOP 프로그래밍
+                        </li>
+                        <li className={classes.li}>
+                            Express를 이용한 Backend 구현
+                        </li>
+                        <li className={classes.li}>
+                            BPMN.io를 확장하여 개발한 Flow Editor 개발
+                        </li>
+                        <li className={classes.li}>
+                            Inversify를 이용한 Signltone 패턴을 활용 및 이를 통해 하드웨어 자원 절약 
+                        </li>
+                    </ul>
+
+                    </Typography>
+                </GridItem>     
+            </GridItem>
+           
+                  
         </GridContainer>
     );
 }

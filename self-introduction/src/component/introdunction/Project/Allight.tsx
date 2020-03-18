@@ -12,7 +12,9 @@ import { autoPlay } from 'react-swipeable-views-utils';
   
 const useStyles = makeStyles({
     title: {
-        color: "#3C4858",
+        width: "100%",
+        textAlign: "center",
+        color: "#29088A",
         margin: "1.75rem 0 0.875rem",
         textDecoration: "none",
         fontWeight: 700,
@@ -43,8 +45,9 @@ const useStyles = makeStyles({
     
     },
     videoButton: {
-        marginLeft: "30px",
+        fontSize : '7px',
         lineHeight: 1.5,
+        height:'20px'
     },
     button: {
         marginTop: "5px",
@@ -75,6 +78,15 @@ const useStyles = makeStyles({
         margin: "1.071rem auto 0",
         textAlign: "center"
     },
+    li :{
+        "&:before": {
+            position:"absolute",
+            left:0,
+            display:'inline-block',
+            content:"•",
+            color : "#3a7bd5"
+        },
+    }
 });
 
 const tutorialSteps = [
@@ -126,105 +138,150 @@ export default function Allight(props: any) {
       };
     return (
         <GridContainer justify="center">
-            <GridItem xs={12} sm={12}>
-                <h3 className={classes.title}>Allight</h3>
-                <Button
-                        variant="contained"
-                        color="secondary"
-                        size="small"
-                        className={classes.videoButton}
-                        href={'https://www.youtube.com/watch?v=BD8aFohG8cg'}
-                        target="_blank"
-                        startIcon={<PlayArrowIcon />}
-                >
-                    Watch Video
-                </Button>   
-                <p>
-                   WoT 조명을 통해 받는 다양한 알림{" "}
-                </p>
-                <Typography variant="caption" display="block" gutterBottom>
-                    ETRI WoT 홈 가전 경진대회 우수상
-                </Typography>
-            </GridItem>
-            <GridItem xs={12} sm={12}>
-                <Chip className={classes.skillChip} variant="outlined" size="small" label="Android" color="primary" />
-            </GridItem> 
-
-            <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
-
-            <GridItem xs={12} sm={12}>
-                <Typography variant="h6" gutterBottom className={classes.subTitle}>
-                    Motivation
-                </Typography>
-
-                 <Typography variant="body2" gutterBottom>
-                    에트리 WoT 홈 가전 경진대회 제출물로, 스마트폰과 스마트전구를 연동하여 스마트폰으로 오는 알림들을 스마트전구를 통해 시각적으로 보여준다.
-                    IFTTT( If This, Then That )의 개념을 적용한 서비스이다. 예를들어, '메일이 오면 (If this) 빨간색 불빛으로 2번 깜박여줘 (Then That)'와 같은 기능을 실행 할 수 있다.
-                </Typography>
-            </GridItem>     
-            <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
-            <GridItem xs={12} sm={12}>
-                <Typography variant="h6" gutterBottom className={classes.subTitle}>
-                    Usage
-                </Typography>
-                {/* <Paper square elevation={0}>
-                    <Typography>etaet</Typography>
-                </Paper> */}
-                <div className={classes.appDetail}>
-                    <SwipeableViews
-                    className={classes.subTitle}
-                        axis={'x-reverse'}
-                        index={activeStep}
-                        onChangeIndex={handleStepChange}
-                        enableMouseEvents
+             <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
+             <GridItem xs={"auto"} sm={3}>
+                <GridItem xs={12} sm={12}>
+                    <Typography variant="h6" gutterBottom className={classes.title}>
+                        Allight
+                    </Typography>
+                    
+                    {/* <Button
+                            variant="contained"
+                            color="secondary"
+                            size="small"
+                            className={classes.videoButton}
+                            href={'https://www.youtube.com/watch?v=BD8aFohG8cg'}
+                            target="_blank"
+                            startIcon={<PlayArrowIcon />}
                     >
-                        {tutorialSteps.map((step, index) => (
-                        
+                        Watch Video
+                    </Button>    */}
+                    {/* <p>
+                        에트리 WoT 홈 가전 경진대회 제출물로, 스마트폰과 스마트전구를 연동하여 스마트폰으로 오는 알림들을 스마트전구를 통해 시각적으로 보여준다.
+                        IFTTT( If This, Then That )의 개념을 적용한 서비스이다. 예를들어, '메일이 오면 (If This) 빨간색 불빛으로 2번 깜박여줘 (Then That)'와 같은 기능을 실행 할 수 있다.{" "}
+                    </p> */}
+                    {/* <Typography variant="caption" display="block" gutterBottom>
+                        ETRI WoT 홈 가전 경진대회 우수상
+                    </Typography> */}
+                </GridItem>
 
-                        <div key={step.label}>
-                            <GridContainer style={{margin:'0px'}} justify="flex-start">
-                            <video
-                                className = {classes.video}
-                                preload="auto" 
-                                playsInline={true} 
-                                autoPlay={true}
-                                muted={true}
-                                loop={true}
-                                src={step.video}>
-                            </video>
+             </GridItem>
+             <GridItem xs={"auto"} sm={9}>
+                {/* <GridItem xs={12} sm={12}>
+                    <Chip className={classes.skillChip} variant="outlined" size="small" label="Android" color="primary" />
+                </GridItem>  */}
 
-                            <div className = {classes.appDescription}>
-                            <Typography variant="body2" gutterBottom>
-                                {step.description}
-                            </Typography>
+                <GridItem xs={12} sm={12}>
+                    <Typography variant="h6" gutterBottom className={classes.subTitle}>
+                        Description
+                    </Typography>
+
+                    <Typography variant="body1" gutterBottom>         
+                    에트리 WoT 홈 가전 경진대회 제출물로, 스마트폰과 스마트전구를 연동하여 스마트폰으로 오는 알림들을 스마트전구를 통해 시각적으로 보여준다.
+                    IFTTT( If This, Then That )의 개념을 적용한 서비스이다. 예를들어, '메일이 오면 (If This) 빨간색 불빛으로 2번 깜박여줘 (Then That)'와 같은 기능을 실행 할 수 있다.{" "}
+                    <Button
+                            variant="contained"
+                            color="secondary"
+                            size="small"
+                            className={classes.videoButton}
+                            href={'https://www.youtube.com/watch?v=BD8aFohG8cg'}
+                            target="_blank"
+                            startIcon={<PlayArrowIcon />}
+                    >
+                        Watch Video
+                    </Button>   
+                    </Typography>
+                    <Typography variant="caption" display="block" gutterBottom>
+                        ETRI WoT 홈 가전 경진대회 우수상
+                    </Typography>
+                    <Chip className={classes.skillChip} variant="outlined" size="small" label="Android" color="primary" />
+                </GridItem>     
+
+                <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
+
+                <GridItem xs={12} sm={12}>
+                    <Typography variant="h6" gutterBottom className={classes.subTitle}>
+                        What did I do
+                    </Typography>
+
+                    <Typography variant="body1" gutterBottom>         
+                    <ul>
+                        <li className={classes.li}>
+                            프로젝트 총괄 및 서비스 기획
+                        </li>
+                        <li className={classes.li}>
+                            안드로이드 어플리케이션 설계 및 개발
+                        </li>    
+                    </ul>
+
+                    </Typography>
+                </GridItem>     
+                <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
+                <GridItem xs={12} sm={12}>
+                    <Typography variant="h6" gutterBottom className={classes.subTitle}>
+                        Usage
+                    </Typography>
+                    {/* <Paper square elevation={0}>
+                        <Typography>etaet</Typography>
+                    </Paper> */}
+                    <div className={classes.appDetail}>
+                        <SwipeableViews
+                        className={classes.subTitle}
+                            axis={'x-reverse'}
+                            index={activeStep}
+                            onChangeIndex={handleStepChange}
+                            enableMouseEvents
+                        >
+                            {tutorialSteps.map((step, index) => (
                             
+
+                            <div key={step.label}>
+                                <GridContainer style={{margin:'0px'}} justify="flex-start">
+                                <video
+                                    className = {classes.video}
+                                    preload="auto" 
+                                    playsInline={true} 
+                                    autoPlay={true}
+                                    muted={true}
+                                    loop={true}
+                                    src={step.video}>
+                                </video>
+
+                                <div className = {classes.appDescription}>
+                                <Typography variant="body2" gutterBottom>
+                                    {step.description}
+                                </Typography>
+                                
+                                </div>
+                    
+                                </GridContainer>
+                                
                             </div>
-                
-                            </GridContainer>
-                            
-                        </div>
-                        ))}
-                    </SwipeableViews>
-                    <MobileStepper
-                        steps={maxSteps}
-                        position="static"
-                        variant="text"
-                        activeStep={activeStep}
-                        nextButton={
-                        <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-                            Next
-                            {<KeyboardArrowRight />}
-                        </Button>
-                        }
-                        backButton={
-                        <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                            {<KeyboardArrowLeft />}
-                            Back
-                        </Button>
-                        }
-                    />
-                </div>
-            </GridItem>     
+                            ))}
+                        </SwipeableViews>
+                        <MobileStepper
+                            steps={maxSteps}
+                            position="static"
+                            variant="text"
+                            activeStep={activeStep}
+                            nextButton={
+                            <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+                                Next
+                                {<KeyboardArrowRight />}
+                            </Button>
+                            }
+                            backButton={
+                            <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                                {<KeyboardArrowLeft />}
+                                Back
+                            </Button>
+                            }
+                        />
+                    </div>
+                </GridItem>     
+            </GridItem> 
+            
+            
 
 
         </GridContainer>

@@ -9,7 +9,9 @@ import PlayArrowIcon from '@material-ui/icons/PlayArrow';
   
 const useStyles = makeStyles({
     title: {
-        color: "#3C4858",
+        width: "100%",
+        textAlign: "center",
+        color: "#29088A",
         margin: "1.75rem 0 0.875rem",
         textDecoration: "none",
         fontWeight: 700,
@@ -101,32 +103,47 @@ export default function AnylinkStudio(props: any) {
       };
     return (
         <GridContainer justify="center">
-            <GridItem xs={12} sm={12}>
-                <h3 className={classes.title}>Anylink Studio</h3>  
-                <p>
-                    Eclipse RCP기반의 Anylink 스튜디오{" "}
-                </p>
-            </GridItem>
-            <GridItem xs={12} sm={12}>
-                <Chip className={classes.skillChip} variant="outlined" size="small" label="Java" color="primary" />
-                <Chip className={classes.skillChip}variant="outlined" size="small" label="Eclipse RCP" color="primary" />
-                <Chip className={classes.skillChip} variant="outlined" size="small" label="SWT" color="primary" />
-            </GridItem>      
-
             <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
+            <GridItem xs={"auto"} sm={3}>
+                <GridItem xs={12} sm={12}>
+                    <Typography variant="h6" gutterBottom className={classes.title}>
+                        Anylink7 Studio
+                    </Typography>
+                </GridItem>
+            </GridItem>
+            <GridItem xs={"auto"} sm={9}>
+                <GridItem xs={12} sm={12}>
+                    <Typography variant="h6" gutterBottom className={classes.subTitle}>
+                        Description
+                    </Typography>
+
+                    <Typography variant="body1" gutterBottom>         
+                        Eclipse RCP기반의 Anylink 스튜디오{" "}
+                   
+                    </Typography>
+                   
+                    <Chip className={classes.skillChip} variant="outlined" size="small" label="Java" color="primary" />
+                    <Chip className={classes.skillChip}variant="outlined" size="small" label="Eclipse RCP" color="primary" />
+                    <Chip className={classes.skillChip} variant="outlined" size="small" label="SWT" color="primary" />
+                </GridItem>     
+             
+                <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
+                
+                <GridItem xs={12} sm={12}>
+                    <Typography variant="h6" gutterBottom className={classes.subTitle}>
+                        Anylink
+                    </Typography>
+
+                    <Typography variant="body2" gutterBottom>
+                        TMAX에서 개발한 통합 인터페이스 솔루션. 기업 내부 시스템간의 연계, 외부기관 연계, 그리고 기업에서 관리하는 각종 채널까지 연계하는 기능 제공합니다. 
+                        Anylink는 <b>엔진, 어뎁터, 스튜디오</b>로 구성되어 있으며 본인은 <b>스튜디오</b> 개발 및 유지/보수에 기여하였습니다.<br/>
+                        스튜디오는 엔진과 어뎁터에서 사용하는 리소스들을 개발하는 툴로, Eclipse RCP 기반의 GUI 프로그램입니다. Plugin 방식으로 개발되었으며, SWT를 이용하여 개발되었습니다.
+
+                    </Typography>
+                </GridItem>          
+            </GridItem>
             
-             <GridItem xs={12} sm={12}>
-                <Typography variant="h6" gutterBottom className={classes.subTitle}>
-                    Anylink
-                </Typography>
-
-                 <Typography variant="body2" gutterBottom>
-                    TMAX에서 개발한 통합 인터페이스 솔루션. 기업 내부 시스템간의 연계, 외부기관 연계, 그리고 기업에서 관리하는 각종 채널까지 연계하는 기능 제공합니다. 
-                    Anylink는 <b>엔진, 어뎁터, 스튜디오</b>로 구성되어 있으며 본인은 <b>스튜디오</b> 개발 및 유지/보수에 기여하였습니다.<br/>
-                    스튜디오는 엔진과 어뎁터에서 사용하는 리소스들을 개발하는 툴로, Eclipse RCP 기반의 GUI 프로그램입니다. Plugin 방식으로 개발되었으며, SWT를 이용하여 개발되었습니다.
-
-                </Typography>
-            </GridItem>           
+             
         </GridContainer>
     );
 }

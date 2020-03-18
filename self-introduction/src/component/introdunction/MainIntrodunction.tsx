@@ -7,7 +7,7 @@ import GridContainer from '../Grid/GridContainer';
 import GridItem from '../Grid/GridItem';
 
 import profile from "../../assets/img/faces/namhyun.jpg";
-import { Button, Chip } from '@material-ui/core';
+import { Button, Chip, Divider } from '@material-ui/core';
 import GripSensing from './Project/GripSensing';
 import HyperStudio from './Project/HyperStudio';
 import Allight from './Project/Allight';
@@ -180,12 +180,16 @@ export function MainIntrodunction(props : introdunctionProps) {
                     <Button className={classes.margin5} target={"_blank"} href={"mailto: knh6210@gmail.com"}>
                       <i className={"fas fa-envelope"} />
                     </Button>
-                    <Button className={classes.margin5} target={"_blank"}  href={'https://www.instagram.com/knh0126'}>
+                    {/* <Button className={classes.margin5} target={"_blank"}  href={'https://www.instagram.com/knh0126'}>
                       <i className={"fab fa-instagram"} />
-                    </Button>
+                    </Button> */}
                     <Button className={classes.margin5} target={"_blank"}  href={'https://www.linkedin.com/in/%EB%82%A8%ED%98%84-%EA%B9%80-2a8644167'}>
                       <i className={"fab fa-linkedin"} />
                     </Button>
+
+                    <h6 className={classes.job}> 성균관대학교 소프트웨어학과 학사 ( 2013.02 ~ 2016.09)</h6>
+                    <h6 className={classes.job}> 성균관대학교 소프트웨어플랙폼학과 석사( 2016.09 ~ 2018.02)</h6>
+                    <h6 className={classes.job}> 티맥스 소프트 연구원( 2018.02 ~ )</h6>
                   </div>
                 </div>
               </GridItem>
@@ -204,14 +208,14 @@ export function MainIntrodunction(props : introdunctionProps) {
               <div className={classes.project}>
                 <h3 className={classes.title}>Skill</h3>
                 <div>
-                  <p>JAVA, TypeScript, JavaScript, C 등 다양한 언어를 이해하고 사용할 수 있습니다.</p>
+                  <p>Java, TypeScript, JavaScript, C 등 다양한 언어를 이해하고 사용할 수 있습니다.</p>
                   <p>Web, Android, Eclipse RCP등 다양한 플랫폼의 프론트엔드 개발 경험이 있습니다.</p>
                   <p>HTML, CSS의 표준을 준수하며 개발할 수 있습니다.</p>
+                  <p>React, React-Redux 사용에 능숙합니다.</p>
                   <p>Grunt, Webpack등의 번들링 툴을 이용할 수 있습니다.</p>
                   <p>Node.js의 express를 이용한 backend 개발 경험이 있습니다.</p>
-                  <p>React, React-Redux 사용에 능숙합니다.</p>
+                  <p>Git 사용이 능숙합니다.</p>
                   <p>다양한 오픈소스 사용에 능숙하며, 기존 플랫폼에 쉽게 적용할 수 있습니다.</p>
-                  <p>Docker, 쿠버네티스를 이해하고 사용할 수 있습니다.</p>
                   <p>OOP프로그래밍에 능숙하며, 다양한 디자인패턴을 이해하고 사용할 수 있습니다.</p>
                 </div>
               </div>              
@@ -223,17 +227,23 @@ export function MainIntrodunction(props : introdunctionProps) {
               <GridItem xs={12} sm={12}>
               <div className={classes.project}>
                 <h3 className={classes.title}>Project</h3>
-                <div>
+                {/* <div>
                   {projectData.map(data =>{
                     return (data.key == activeProject)
                     ?<Chip className={classes.chip} key={data.key} label={data.label} icon={data.icon} color="primary" onClick={()=>handleProjectClick(data.key)}/> 
                     :<Chip className={classes.chip} key={data.key} label={data.label} icon={data.icon} onClick={()=>handleProjectClick(data.key)}/>
 
                   })}
-                </div>
+                </div> */}
               </div>
               <div>
-                {projectData[activeProject].node}
+                <Allight/>
+                <GripSensing/>
+                <AnylinkStudio/> 
+                <HyperStudio/>
+      {/* <Portfolio/> ,icon:<AccountCircleRoundedIcon fontSize='small'/>},
+      {key:5,label:'SendInstead (...ing)', node:<Portfolio/> ,icon:<AccountCircleRoundedIcon fontSize='small'/>},
+                {projectData[activeProject].node} */}
               </div>
               
               </GridItem>

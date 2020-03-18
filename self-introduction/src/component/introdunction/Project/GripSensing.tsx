@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import GridContainer from '../../Grid/GridContainer';
 import GridItem from '../../Grid/GridItem';
-import { Stepper, Step, StepLabel, StepContent, Typography, Button, Paper, Chip, GridList, GridListTile, ListSubheader, GridListTileBar, Box, Tooltip, Divider } from '@material-ui/core';
+import { Stepper, Step, StepLabel, StepContent, Typography, Button, Paper, Chip, GridList, GridListTile, ListSubheader, GridListTileBar, Box, Tooltip, Divider, Grid } from '@material-ui/core';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import game from "../../../assets/img/gripsensing/game.png";
 import message from "../../../assets/img/gripsensing/message.png";
@@ -15,7 +15,9 @@ import record from "../../../assets/img/gripsensing/record.png";
 import soundsignal from "../../../assets/img/gripsensing/soundsignal.png";
 const useStyles = makeStyles({
     title: {
-        color: "#3C4858",
+        width: "100%",
+        textAlign: "center",
+        color: "#29088A",
         margin: "1.75rem 0 0.875rem",
         textDecoration: "none",
         fontWeight: 700,
@@ -46,8 +48,9 @@ const useStyles = makeStyles({
     
     },
     videoButton: {
-        marginLeft: "30px",
+        fontSize : '7px',
         lineHeight: 1.5,
+        height:'20px'
     },
     button: {
         marginTop: "5px",
@@ -215,132 +218,146 @@ export default function GripSensing(props: any) {
     ]
     return (
         <GridContainer justify="center">
-            <GridItem xs={12} sm={12}>
-                <h3 className={classes.title}>GripSensing</h3>
-                <Button
-                        variant="contained"
-                        color="secondary"
-                        size="small"
-                        className={classes.videoButton}
-                        href={'https://www.youtube.com/watch?v=HpuazVu3mA0'}
-                        target="_blank"
-                        startIcon={<PlayArrowIcon />}
-                >
-                    Watch Video
-                </Button>   
-                <p>
-                    소리 신호를 이용한 스마트폰 그립 감지 시스템{" "}
-                </p>
-                <Typography variant="caption" display="block" gutterBottom>
-                    Towards grip sensing for commodity smartphones through acoustic signature (UbiComp '17 2017)
-                </Typography>
-                <Typography variant="caption" display="block" gutterBottom>
-                    SmartGrip : grip sensing system for commodity mobile devices through sound signals (Personal and Ubiquitous Computing '11 2019)
-                </Typography>
-
-            </GridItem>
-            
-            <GridItem xs={12} sm={12}>
-                <Chip className={classes.skillChip} variant="outlined" size="small" label="Android" color="primary" />
-                <Chip className={classes.skillChip} variant="outlined" size="small" label="Matched Filter" color="primary" />
-                <Chip className={classes.skillChip} variant="outlined" size="small" label="FFT" color="primary" />
-                <Chip className={classes.skillChip}variant="outlined" size="small" label="SoundSignal Processing" color="primary" />
-                <Chip className={classes.skillChip} variant="outlined" size="small" label="LIBSVM" color="primary" />
-            </GridItem>
-
             <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
+            <GridItem xs={"auto"} sm={3}>
+                <GridItem xs={12} sm={12}>
+                    <Typography variant="h6" gutterBottom className={classes.title}>
+                        GripSensing
+                    </Typography>
             
-            <GridItem xs={12} sm={12}>
-                <Typography variant="h6" gutterBottom className={classes.subTitle}>
-                    Motivation
-                </Typography>
-                <div className = { classes.imageContainer}>
-                {tileData.map(tile => (
-                    <div className = {classes.gripBox}>
-                        <img src={tile.img} className={classes.imgFluid} />
-                        <Typography variant="caption" display="block" gutterBottom>
-                            {tile.title}
-                        </Typography>
-    
-                    </div>
-                   
-                ))}
-                </div>
-               
-                 <Typography variant="body2" gutterBottom>
-                    스마트폰 시스템이 사용자의 그립을 인지하고 미리 사용자의 의도를 파악한다면, 스마트폰 사용성에 큰 기여를 할 수 있다.
-                    'SmartGrip'은 스마트폰에 추가적인 하드웨어 없이 기존의 스피커와 마이크로폰을 이용하여 사용자의 그립을 구분하는 시스템이며 이를 이를 활용한 간단한 인터페이스를 제공한다.
-                </Typography>
+                </GridItem>
             </GridItem>
-            <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
-            <GridItem xs={12} sm={12}>
-                <Typography variant="h6" gutterBottom className={classes.subTitle}>
-                    Principle               
-                </Typography>
-                <GridContainer justify="center">
+            <GridItem xs={"auto"} sm={9}>
+                <GridItem xs={12} sm={12}>
+                    <Typography variant="h6" gutterBottom className={classes.subTitle}>
+                        Description
+                    </Typography>
+                    <Typography variant="body1" gutterBottom>         
+                        소리 신호를 이용한 스마트폰 그립 감지 시스템{" "}
+                        <Button
+                                variant="contained"
+                                color="secondary"
+                                size="small"
+                                className={classes.videoButton}
+                                href={'https://www.youtube.com/watch?v=HpuazVu3mA0'}
+                                target="_blank"
+                                startIcon={<PlayArrowIcon />}
+                        >
+                            Watch Video
+                        </Button>  
+                    </Typography>
+                    <Typography variant="caption" display="block" gutterBottom>
+                        Towards grip sensing for commodity smartphones through acoustic signature (UbiComp '17 2017)
+                    </Typography>
+                    <Typography variant="caption" display="block" gutterBottom>
+                        SmartGrip : grip sensing system for commodity mobile devices through sound signals (Personal and Ubiquitous Computing '11 2019)
+                    </Typography>
+                </GridItem>
+                <GridItem xs={12} sm={12}>
+                    <Chip className={classes.skillChip} variant="outlined" size="small" label="Android" color="primary" />
+                    <Chip className={classes.skillChip} variant="outlined" size="small" label="Matched Filter" color="primary" />
+                    <Chip className={classes.skillChip} variant="outlined" size="small" label="FFT" color="primary" />
+                    <Chip className={classes.skillChip}variant="outlined" size="small" label="SoundSignal Processing" color="primary" />
+                    <Chip className={classes.skillChip} variant="outlined" size="small" label="LIBSVM" color="primary" />
+                </GridItem>
+
+                <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
+                
+                <GridItem xs={12} sm={12}>
+                    <Typography variant="h6" gutterBottom className={classes.subTitle}>
+                        Motivation
+                    </Typography>
                     <div className = { classes.imageContainer}>
+                    {tileData.map(tile => (
                         <div className = {classes.gripBox}>
-                            <img src={principle} className={classes.imgPrinciple} />
+                            <img src={tile.img} className={classes.imgFluid} />
                             <Typography variant="caption" display="block" gutterBottom>
-                                소리의 전달 방식
+                                {tile.title}
                             </Typography>
         
                         </div>
-                        <div className = {classes.gripBox}>
-                            <img src={soundsignal} className={classes.imgPrinciple} />
-                            <Typography variant="caption" display="block" gutterBottom>
-                                사용된 소리 신호
-                            </Typography>
-        
-                        </div>
-                        <div className = {classes.gripBox}>
-                            <img src={record} className={classes.imgPrinciple} />
-                            <Typography variant="caption" display="block" gutterBottom>
-                                왼손과 오른손의 소리신호 녹음결과
-                            </Typography>
-        
-                        </div>
+                    
+                    ))}
                     </div>
+                
+                    <Typography variant="body2" gutterBottom>
+                        스마트폰 시스템이 사용자의 그립을 인지하고 미리 사용자의 의도를 파악한다면, 스마트폰 사용성에 큰 기여를 할 수 있다.
+                        'SmartGrip'은 스마트폰에 추가적인 하드웨어 없이 기존의 스피커와 마이크로폰을 이용하여 사용자의 그립을 구분하는 시스템이며 이를 이를 활용한 간단한 인터페이스를 제공한다.
+                    </Typography>
+                </GridItem>
+                <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
+                <GridItem xs={12} sm={12}>
+                    <Typography variant="h6" gutterBottom className={classes.subTitle}>
+                        Principle               
+                    </Typography>
+                    <GridContainer justify="center">
+                        <div className = { classes.imageContainer}>
+                            <div className = {classes.gripBox}>
+                                <img src={principle} className={classes.imgPrinciple} />
+                                <Typography variant="caption" display="block" gutterBottom>
+                                    소리의 전달 방식
+                                </Typography>
+            
+                            </div>
+                            <div className = {classes.gripBox}>
+                                <img src={soundsignal} className={classes.imgPrinciple} />
+                                <Typography variant="caption" display="block" gutterBottom>
+                                    사용된 소리 신호
+                                </Typography>
+            
+                            </div>
+                            <div className = {classes.gripBox}>
+                                <img src={record} className={classes.imgPrinciple} />
+                                <Typography variant="caption" display="block" gutterBottom>
+                                    왼손과 오른손의 소리신호 녹음결과
+                                </Typography>
+            
+                            </div>
+                        </div>
 
 
-                </GridContainer>
-              
-                    <GridItem >
-                        <Typography variant="body2" gutterBottom >
-                        스마트폰의 하단 스피커에서 방출한 소리는 상단 스피커로 이동하면서 <b>'사용자의 손', '주변 환경', '스피커와 마이크 자체의 불안전함'</b> 을 받는다.
-                        SmartGrip은 '주변 환경'의 영향을 최소화 할 수 있는 소리 신호를 제작하였으며, 이를 통하여 사용자가 스마트폰을 잡는방식을 구분할 수 있다. 
-                        이 시스템을 통해 우리는 아래와 같은 사용법을 제시하였으며, 이는 간단한 예시이고 이를 이용한 다양한 UX 개발이 가능할 것으로 보고있다.
-                        </Typography>
-                    </GridItem>
+                    </GridContainer>
+                
+                        <GridItem >
+                            <Typography variant="body2" gutterBottom >
+                            스마트폰의 하단 스피커에서 방출한 소리는 상단 스피커로 이동하면서 <b>'사용자의 손', '주변 환경', '스피커와 마이크 자체의 불안전함'</b> 을 받는다.
+                            SmartGrip은 '주변 환경'의 영향을 최소화 할 수 있는 소리 신호를 제작하였으며, 이를 통하여 사용자가 스마트폰을 잡는방식을 구분할 수 있다. 
+                            이 시스템을 통해 우리는 아래와 같은 사용법을 제시하였으며, 이는 간단한 예시이고 이를 이용한 다양한 UX 개발이 가능할 것으로 보고있다.
+                            </Typography>
+                        </GridItem>
+                </GridItem>
+
+
+                <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
+                <GridItem xs={12} sm={12}>
+                    <Typography variant="h6" gutterBottom className={classes.subTitle}>
+                        Usage Example
+                    </Typography>
+                    <div className={classes.steperContainer}>
+                        <Stepper activeStep={activeStep} orientation="vertical">
+                            {steps.map((label, index) => (
+                            <Step key={label}>
+                                <StepLabel>{label}</StepLabel>
+                                <StepContent>
+                                {getStepContent(index)}
+                                </StepContent>
+                            </Step>
+                            ))}
+                        </Stepper>
+                        {activeStep === steps.length && (
+                            <Paper square elevation={0} className={classes.resetContainer}>
+                            <Typography>Motivation의 6개 그립을 구분하는데 평균 <b>93.3%</b>의 정확도를 보인다.</Typography>
+                            <Button onClick={handleReset} className={classes.button}>
+                                다시보기
+                            </Button>
+                            </Paper>
+                        )}
+                    </div>
+                </GridItem>
             </GridItem>
-
-
-            <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
-            <GridItem xs={12} sm={12}>
-                <Typography variant="h6" gutterBottom className={classes.subTitle}>
-                    Usage Example
-                </Typography>
-                <div className={classes.steperContainer}>
-                    <Stepper activeStep={activeStep} orientation="vertical">
-                        {steps.map((label, index) => (
-                        <Step key={label}>
-                            <StepLabel>{label}</StepLabel>
-                            <StepContent>
-                            {getStepContent(index)}
-                            </StepContent>
-                        </Step>
-                        ))}
-                    </Stepper>
-                    {activeStep === steps.length && (
-                        <Paper square elevation={0} className={classes.resetContainer}>
-                        <Typography>Motivation의 6개 그립을 구분하는데 평균 <b>93.3%</b>의 정확도를 보인다.</Typography>
-                        <Button onClick={handleReset} className={classes.button}>
-                            다시보기
-                        </Button>
-                        </Paper>
-                    )}
-                </div>
-            </GridItem>
+            
+            
+            
             
         </GridContainer>
     );
