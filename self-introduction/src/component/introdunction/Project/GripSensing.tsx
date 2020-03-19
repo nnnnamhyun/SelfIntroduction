@@ -131,12 +131,12 @@ function getSteps() {
 function getStepContentDetailed(step: number) {
     switch (step) {
       case 0:
-        return `먼저 사용자는 자신이 자주 사용하는 그립을 스마트폰에 등록한다. 같은 Grip을 5번정도 다시 잡음으로써 해당 Grip에 대한 다양한 Data를 수집하게 되며, 한번 잡을때마다 5번의 data를 모아서 총 25개의 data를 모은다. 한번 잡을때 걸리는 평균 시간은 1초이다.
-        이 Data를 통해 SmartGrip은 내부적으로 SVM을 통하여 Classification Madel을 만들게 되며 이 Model을 통해 다양한 Grip을 구분한다.`;
+        return `먼저 사용자는 자신이 자주 사용하는 그립을 스마트폰에 등록합니다. 같은 그립을 5번정도 다시 잡음으로써 해당 그립에 대한 다양한 데이터를 수집하게 되며, 한번 잡을때마다 5번의 데이터를 모아서 총 25개의 데이터를 모으게 됩니다. 한번 잡을때 걸리는 평균 시간은 1초입니다.
+        이 데이터를 통해 SmartGrip은 내부적으로 SVM을 통하여 Classification Madel을 만들게 되며 이 Model을 통해 다양한 그립을 구분합니다.`;
       case 1:
-        return '사용자는 자신이 등록한 Grip에 실행시키고 싶은 어플리케이션을 매칭하여 설정한다.';
+        return '사용자는 자신이 등록한 그립에 실행시키고 싶은 어플리케이션을 매칭하여 설정합니다.';
       case 2:
-        return `사용자가 등록된 Grip을 잡은 후, 스마트폰을 한번 흔들게 되면 해당 Grip에 매칭된 어플리케이션을 실행시 킬 수 있다.`;
+        return `사용자가 등록된 그립을 잡은 후, 스마트폰을 한번 흔들게 되면 해당 그립에 매칭된 어플리케이션을 실행시 킬 수 있습니다.`;
       default:
         return 'Unknown step';
     }
@@ -245,7 +245,7 @@ export default function GripSensing(props: any) {
             <GridItem xs={"auto"} sm={3}>
                 <GridItem xs={12} sm={12}>
                     <Typography variant="h6" gutterBottom className={classes.title}>
-                        GripSensing
+                        SmartGrip
                     </Typography>
                     <Typography variant="h6" gutterBottom className={classes.duration}>
                         2016.08~2018.02
@@ -258,7 +258,7 @@ export default function GripSensing(props: any) {
                         Description
                     </Typography>
                     <Typography variant="body1" gutterBottom>         
-                        소리 신호를 이용한 스마트폰 그립 감지 시스템{" "}
+                        소리 신호를 이용한 스마트폰 그립 감지 시스템입니다.{" "}
                         <Button
                                 variant="contained"
                                 color="secondary"
@@ -306,8 +306,8 @@ export default function GripSensing(props: any) {
                     </div>
                 
                     <Typography variant="body2" gutterBottom>
-                        스마트폰 시스템이 사용자의 그립을 인지하고 미리 사용자의 의도를 파악한다면, 스마트폰 사용성에 큰 기여를 할 수 있다.
-                        'SmartGrip'은 스마트폰에 추가적인 하드웨어 없이 기존의 스피커와 마이크로폰을 이용하여 사용자의 그립을 구분하는 시스템이며 이를 이를 활용한 간단한 인터페이스를 제공한다.
+                        위의 사진처럼 사람이 스마트폰을 잡을 때, 스마트폰을 잡는 손 모양에는 '사용의도'가 담겨있습니다. 스마트폰이 사용자의 그립을 인지하고 미리 사용자의 의도를 파악한다면, 스마트폰 사용성에 큰 기여를 할 수 있습니다.
+                        SmartGrip은 추가적인 하드웨어 없이 스마트폰에 내장된 스피거와 마이크를 이용하여 사용자의 그립을 구분하는 시스템이며 이를 이를 활용한 간단한 서비스를 제공합니다.
                     </Typography>
                 </GridItem>
                 <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
@@ -345,9 +345,9 @@ export default function GripSensing(props: any) {
                 
                         <GridItem >
                             <Typography variant="body2" gutterBottom >
-                            스마트폰의 하단 스피커에서 방출한 소리는 상단 스피커로 이동하면서 <b>'사용자의 손', '주변 환경', '스피커와 마이크 자체의 불안전함'</b> 을 받는다.
-                            SmartGrip은 '주변 환경'의 영향을 최소화 할 수 있는 소리 신호를 제작하였으며, 이를 통하여 사용자가 스마트폰을 잡는방식을 구분할 수 있다. 
-                            이 시스템을 통해 우리는 아래와 같은 사용법을 제시하였으며, 이는 간단한 예시이고 이를 이용한 다양한 UX 개발이 가능할 것으로 보고있다.
+                            스마트폰의 하단 스피커에서 방출한 소리는 상단 스피커로 이동하면서 <b>'사용자의 손', '주변 환경', '스피커와 마이크 자체의 불안전함'</b>의 영향을 받습니다.
+                            SmartGrip은 '주변 환경'의 영향을 최소화 할 수 있는 소리 신호를 제작하였으며, 이를 통하여 사용자가 스마트폰을 잡는방식을 구분해 낼 수 있습니다.
+                            이 시스템을 통해, 사용자의 그립을 판단한 후 해당 그립에 맞는 어플리케이션을 실행 할 수 있는 간단하 서비스를 제공하였습니다. 
                             </Typography>
                         </GridItem>
                 </GridItem>
@@ -369,7 +369,7 @@ export default function GripSensing(props: any) {
                             MatchedFilter, Band Pass Filter, FFT 등을 이용한 소리 신호 분석
                         </li> 
                         <li className={classes.li}>
-                            Lib-Ssvm을 이용한 Multi-class svm을 구현하여 여러가지 소리 신호 분류
+                            Lib-svm을 이용한 Multi-class svm을 구현하여 여러가지 소리 신호 분류
                         </li>  
                         <li className={classes.li}>
                             안드로이드 Service를 이용한 Backgorund 어플리케이션 개발

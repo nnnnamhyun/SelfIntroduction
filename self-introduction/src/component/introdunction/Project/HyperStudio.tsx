@@ -144,8 +144,8 @@ export default function HyperStudio(props: any) {
                         Description
                     </Typography>
                     <Typography variant="body1" gutterBottom>         
-                    Anylink (엔진, 게이트웨이, 스튜디오, 마스터) 신 제품의 스튜디오 모듈. Anylink 신제품의 설계부터 참여하였습니다.
-                        그 중 Studio 프론트엔드 혼자 맡아 개발하였으며, 2019년 12월경에 1차적으로 릴리즈 하였습니다.{" "}
+                    Anylink (엔진, 게이트웨이, 하이퍼스튜디오, 마스터) 신 제품의 스튜디오 모듈입니다. 이전버전의 Anylink Studio가 Eclipse RCP로 개발되었다면, 신 제품의 스튜디오는 웹으로 개발되었습니다.
+                    Anylink 신제품은 설계단개부터 참여하였으며, Hyper Studio 모듈을 혼자 맡아 개발을 진행하였습니다. 2019년 12월경에 내부적으로 첫 릴리즈를 하였습니다.
                     </Typography>
                 </GridItem>
 
@@ -173,7 +173,7 @@ export default function HyperStudio(props: any) {
                     <Typography variant="body1" gutterBottom>         
                     <ul>
                         <li className={classes.li}>
-                            Theia Framework를 이용한 Web형식의 Studio 개발
+                            Theia Framework를 이용한 Web형식의 Hyper Studio 개발
                         </li>
                         <li className={classes.li}>
                             React 컴포넌트 계층 구조 디자인 및 이를 이용한 리소스 에디터 페이지 개발
