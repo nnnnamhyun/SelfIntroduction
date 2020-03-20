@@ -189,7 +189,7 @@ export function MainIntrodunction(props : introdunctionProps) {
 
                     <h6 className={classes.job}> 성균관대학교 소프트웨어학과 학사 ( 2013.02 ~ 2016.09 )</h6>
                     <h6 className={classes.job}> 성균관대학교 소프트웨어플랙폼학과 석사 ( 2016.09 ~ 2018.02 )</h6>
-                    <h6 className={classes.job}> 티맥스 소프트 연구원 ( 2018.02 ~ ing )</h6>
+                    <h6 className={classes.job}> 티맥스 소프트 연구원 ( 2018.02 ~ ing ) </h6>
                   </div>
                 </div>
               </GridItem>
