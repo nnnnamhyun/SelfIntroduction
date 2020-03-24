@@ -212,11 +212,11 @@ export function MainIntrodunction(props : introdunctionProps) {
                   <p>Web, Android, Eclipse RCP등 다양한 플랫폼의 프론트엔드 개발 경험이 있습니다.</p>
                   <p>HTML, CSS의 표준을 준수하며 개발할 수 있습니다.</p>
                   <p>React, React-Redux 사용에 능숙합니다.</p>
-                  <p>Grunt, Webpack등의 번들링 툴을 이용할 수 있습니다.</p>
-                  <p>Node.js의 express를 이용한 backend 개발 경험이 있습니다.</p>
+                  <p>Webpack등의 번들링 툴을 이용할 수 있습니다.</p>
                   <p>Git 사용이 능숙합니다.</p>
                   <p>다양한 오픈소스 사용에 능숙하며, 기존 플랫폼에 쉽게 적용할 수 있습니다.</p>
-                  <p>OOP프로그래밍에 능숙하며, 다양한 디자인패턴을 이해하고 사용할 수 있습니다.</p>
+                  <p>OOP프로그래밍에 익숙합니다.</p>
+                  <p>Node.js의 express를 이용한 backend 개발 경험이 있습니다.</p>
                 </div>
               </div>              
               </GridItem>
@@ -237,10 +237,13 @@ export function MainIntrodunction(props : introdunctionProps) {
                 </div> */}
               </div>
               <div>
-                <Allight/>
-                <GripSensing/>
-                <AnylinkStudio/> 
                 <HyperStudio/>
+                <AnylinkStudio/> 
+                <GripSensing/>
+                <Allight/>
+                
+                
+                
       {/* <Portfolio/> ,icon:<AccountCircleRoundedIcon fontSize='small'/>},
       {key:5,label:'SendInstead (...ing)', node:<Portfolio/> ,icon:<AccountCircleRoundedIcon fontSize='small'/>},
                 {projectData[activeProject].node} */}

@@ -193,8 +193,8 @@ export default function Allight(props: any) {
                     </Typography>
 
                     <Typography variant="body1" gutterBottom>         
-                    에트리 WoT 홈 가전 경진대회 제출물로, 스마트폰과 스마트전구를 연동하여 스마트폰으로 오는 알림들을 스마트전구를 통해 시각적으로 보여준다.
-                    IFTTT( If This, Then That )의 개념을 적용한 서비스이다. 예를들어, '메일이 오면 (If This) 빨간색 불빛으로 2번 깜박여줘 (Then That)'와 같은 기능을 실행 할 수 있다.{" "}
+                    에트리 WoT 홈 가전 경진대회 제출물로, 스마트폰과 스마트전구를 연동하여 스마트폰으로 오는 알림들을 스마트전구를 통해 시각적으로 보여줍니다.
+                    IFTTT( If This, Then That )의 개념을 적용한 서비스입니다. 예를들어, '메일이 오면 (If This) 빨간색 불빛으로 2번 깜박여줘 (Then That)'와 같은 기능을 실행 할 수 있습니다.{" "}
                     <Button
                             variant="contained"
                             color="secondary"

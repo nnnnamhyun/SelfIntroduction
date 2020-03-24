@@ -145,7 +145,7 @@ export default function HyperStudio(props: any) {
                     </Typography>
                     <Typography variant="body1" gutterBottom>         
                     Anylink (엔진, 게이트웨이, 하이퍼스튜디오, 마스터) 신 제품의 스튜디오 모듈입니다. 이전버전의 Anylink Studio가 Eclipse RCP로 개발되었다면, 신 제품의 스튜디오는 웹으로 개발되었습니다.
-                    Anylink 신제품은 설계단개부터 참여하였으며, Hyper Studio 모듈을 혼자 맡아 개발을 진행하였습니다. 2019년 12월경에 내부적으로 첫 릴리즈를 하였습니다.
+                    Anylink 신제품은 설계단계부터 참여하였으며, Hyper Studio 모듈을 혼자 맡아 개발을 진행하였습니다. 2019년 12월경에 내부적으로 첫 릴리즈를 하였습니다.
                     </Typography>
                 </GridItem>
 
@@ -188,7 +188,7 @@ export default function HyperStudio(props: any) {
                             BPMN.io를 확장하여 개발한 Flow Editor 개발
                         </li>
                         <li className={classes.li}>
-                            Inversify를 이용한 Signltone 패턴을 활용 및 이를 통해 하드웨어 자원 절약 
+                            Inversify를 이용한 singleton 패턴을 활용 및 이를 통해 하드웨어 자원 절약 
                         </li>
                     </ul>
 
