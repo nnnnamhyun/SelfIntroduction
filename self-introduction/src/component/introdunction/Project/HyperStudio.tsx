@@ -188,7 +188,7 @@ export default function HyperStudio(props: any) {
                             BPMN.io를 확장하여 개발한 Flow Editor 개발
                         </li>
                         <li className={classes.li}>
-                            Inversify를 이용한 singleton 패턴을 활용 및 이를 통해 하드웨어 자원 절약 
+                            Inversify를 이용한 dependency injection
                         </li>
                     </ul>
 
