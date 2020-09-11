@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import GridContainer from '../../Grid/GridContainer';
 import GridItem from '../../Grid/GridItem';
 import { Stepper, Step, StepLabel, StepContent, Typography, Button, Paper, Chip, MobileStepper, Divider } from '@material-ui/core';
@@ -133,6 +133,7 @@ const tutorialSteps = [
   ];
 export default function Allight(props: any) {
     const classes = useStyles();
+    const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
     const maxSteps = tutorialSteps.length;
     const handleNext = () => {
@@ -210,6 +211,7 @@ export default function Allight(props: any) {
                     <Typography variant="caption" display="block" gutterBottom>
                         ETRI WoT 홈 가전 경진대회 우수상
                     </Typography>
+                    <Chip className={classes.skillChip} variant="outlined" size="small" label="Java" color="primary" />
                     <Chip className={classes.skillChip} variant="outlined" size="small" label="Android" color="primary" />
                 </GridItem>     
 
@@ -242,8 +244,8 @@ export default function Allight(props: any) {
                     </Paper> */}
                     <div className={classes.appDetail}>
                         <SwipeableViews
-                        className={classes.subTitle}
-                            axis={'x-reverse'}
+                            className={classes.subTitle}
+                            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                             index={activeStep}
                             onChangeIndex={handleStepChange}
                             enableMouseEvents
@@ -277,18 +279,18 @@ export default function Allight(props: any) {
                         </SwipeableViews>
                         <MobileStepper
                             steps={maxSteps}
+                            variant="dots"
                             position="static"
-                            variant="text"
                             activeStep={activeStep}
                             nextButton={
                             <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
                                 Next
-                                {<KeyboardArrowRight />}
+                                {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
                             </Button>
                             }
                             backButton={
                             <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                                {<KeyboardArrowLeft />}
+                                {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
                                 Back
                             </Button>
                             }

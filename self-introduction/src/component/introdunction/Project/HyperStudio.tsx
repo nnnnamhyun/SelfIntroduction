@@ -112,6 +112,7 @@ function getStepContent(step: number) {
 export default function HyperStudio(props: any) {
     const classes = useStyles();
     const [activeStep, setActiveStep] = React.useState(0);
+    const [checkedNumber, setActiveChecked] = React.useState(0);
     const steps = getSteps();
     const handleNext = () => {
         setActiveStep(prevActiveStep => prevActiveStep + 1);
@@ -124,9 +125,11 @@ export default function HyperStudio(props: any) {
       const handleReset = () => {
         setActiveStep(0);
       };
+
     return (
         <GridContainer justify="center">
              <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
+   
             <GridItem xs={"auto"} sm={3}>
                 <GridItem xs={12} sm={12}>
                     <Typography variant="h6" gutterBottom className={classes.title}>

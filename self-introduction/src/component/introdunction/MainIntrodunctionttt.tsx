@@ -18,8 +18,6 @@ import SchoolRoundedIcon from '@material-ui/icons/SchoolRounded';
 import BusinessRoundedIcon from '@material-ui/icons/BusinessRounded';
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import TmaxSoft from './Work/TmaxSoft';
-import Skills from './Skills/Skills';
-import SKKU from './Work/SKKU';
 const useStyles = makeStyles(theme => ({
   main: {
     background: "#FFFFFF",
@@ -58,8 +56,8 @@ const useStyles = makeStyles(theme => ({
     "@media (min-width: 992px)": {
       maxWidth: "960px"
     },
-    "@media (min-width: 800px)": {
-      maxWidth: "800px"
+    "@media (min-width: 1200px)": {
+      maxWidth: "1140px"
     }
   },
   profile: {
@@ -82,11 +80,12 @@ const useStyles = makeStyles(theme => ({
     fontFamily: `"Roboto Slab", "Times New Roman", serif`,
     display: "inline-block",
     position: "relative",
+    marginTop: "30px",
     minHeight: "32px",
-    fontSize : "40px",
+    fontSize : "25px",
   },
   job : {
-    fontSize : "15px",
+    fontSize : "12px",
     marginTop:"10px",
     marginBottom : "10px"
   },
@@ -182,13 +181,16 @@ export function MainIntrodunction(props : introdunctionProps) {
                     <Button className={classes.margin5} target={"_blank"} href={"mailto: knh6210@gmail.com"}>
                       <i className={"fas fa-envelope"} />
                     </Button>
+                    {/* <Button className={classes.margin5} target={"_blank"}  href={'https://www.instagram.com/knh0126'}>
+                      <i className={"fab fa-instagram"} />
+                    </Button> */}
                     <Button className={classes.margin5} target={"_blank"}  href={'https://www.linkedin.com/in/%EB%82%A8%ED%98%84-%EA%B9%80-2a8644167'}>
                       <i className={"fab fa-linkedin"} />
                     </Button>
-{/* 
+
                     <h6 className={classes.job}> 성균관대학교 소프트웨어학과 학사 ( 2013.02 ~ 2016.09 )</h6>
                     <h6 className={classes.job}> 성균관대학교 소프트웨어플랙폼학과 석사 ( 2016.09 ~ 2018.02 )</h6>
-                    <h6 className={classes.job}> 티맥스 소프트 연구원 ( 2018.02 ~ ing ) </h6> */}
+                    <h6 className={classes.job}> 티맥스 소프트 연구원 ( 2018.02 ~ ing ) </h6>
                   </div>
                 </div>
               </GridItem>
@@ -196,18 +198,21 @@ export function MainIntrodunction(props : introdunctionProps) {
             </GridContainer>
             <div className={classes.description} >
               <p>
-                {` 사용자와 직접 Interaction 하는 Front-End 개발을 좋아합니다. 간결하고 예쁘지만, 편리한게 만드는걸 좋아합니다.
+                {`
+                  
+                사용자와 직접 Interaction 하는 Front-End 개발을 좋아합니다. UX/UI 개선을 좋아하며, 편리하지만 간결하고 예쁘게 만드는걸 좋아합니다.
+                Web Front-End 뿐만 아니라, Eclipse RCP, Android 등 다양한 플랫폼의 Front-End 개발 경험이 있습니다.
                 `}
               </p>
             </div>            
 
-            {/* <GridContainer justify="center" id={"skill"}> 
+            <GridContainer justify="center" id={"skill"}> 
               <GridItem xs={12} sm={12}>
               <div className={classes.project}>
                 <h3 className={classes.title}>Skill</h3>
                 <div>
-                  <p>JavaScript ( ES5 ~ ) / TypeScript 문법에 익숙하며 능숙하게 다를 수 있습니다. </p>
-                  <p>React ( React, React-Redux, ContextAPI, Redux-Thunk ) 사용에 능숙합니다.</p>  
+                  <p>JavaScript / TypeScript 문법에 익숙하며 능숙하게 다를 수 있습니다. </p>
+                  <p>React ( React, React-Redux, ContextAPI, Redux-Thunk ) 사용에 능숙합니다.</p>
                   <p>HTML, CSS의 표준을 준수하며 개발할 수 있습니다.</p>
                   <p>Webpack등의 번들링 툴을 이용할 수 있습니다.</p>
                   <p>Git 사용이 능숙합니다.</p>
@@ -215,17 +220,16 @@ export function MainIntrodunction(props : introdunctionProps) {
                   <p>OOP프로그래밍에 익숙하며, 다양한 디자인 패턴을 적용할 수 있습니다.</p>
                   <p>Node.js의 express를 이용한 backend 개발 경험이 있습니다.</p>
                   <p>Web, Android, Eclipse RCP등 다양한 플랫폼의 프론트엔드 개발 경험이 있습니다.</p>
-                  
                 </div>
               </div>              
               </GridItem>
               
-            </GridContainer> */}
+            </GridContainer>
             
             <GridContainer justify="center" id={"project"}>
               <GridItem xs={12} sm={12}>
               <div className={classes.project}>
-                <h3 className={classes.title}>WORK EXPERIENCE</h3>
+                <h3 className={classes.title}>Project</h3>
                 {/* <div>
                   {projectData.map(data =>{
                     return (data.key == activeProject)
@@ -236,14 +240,10 @@ export function MainIntrodunction(props : introdunctionProps) {
                 </div> */}
               </div>
               <div>
-               <TmaxSoft/>
-                {/* <HyperStudio/> */}
-                {/* <AnylinkStudio/>  */}
-                <SKKU/>
-               
-                {/* <GripSensing/>
-                <Allight/> */}
-                
+                <HyperStudio/>
+                <AnylinkStudio/> 
+                <GripSensing/>
+                <Allight/>               
                 
                 
       {/* <Portfolio/> ,icon:<AccountCircleRoundedIcon fontSize='small'/>},
@@ -254,18 +254,6 @@ export function MainIntrodunction(props : introdunctionProps) {
               </GridItem>
               
             </GridContainer>
-
-            <GridContainer justify="center" id={"skill"}> 
-              <GridItem xs={12} sm={12}>
-              <div className={classes.project}>
-                <h3 className={classes.title}>Skills</h3>
-    
-              </div>       
-              <Skills/>       
-              </GridItem>
-              
-            </GridContainer>
-
 
               
           </div>

@@ -133,7 +133,7 @@ export default function AnylinkStudio(props: any) {
                         Anylink7 Studio
                     </Typography>
                     <Typography variant="h6" gutterBottom className={classes.duration}>
-                        2018.02 ~ 2019.07
+                        2018.02 ~ ing
                     </Typography>
                 </GridItem>
             </GridItem>

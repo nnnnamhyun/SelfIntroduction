@@ -279,6 +279,7 @@ export default function GripSensing(props: any) {
                     </Typography>
                 </GridItem>
                 <GridItem xs={12} sm={12}>
+                <Chip className={classes.skillChip} variant="outlined" size="small" label="Java" color="primary" />
                     <Chip className={classes.skillChip} variant="outlined" size="small" label="Android" color="primary" />
                     <Chip className={classes.skillChip} variant="outlined" size="small" label="Matched Filter" color="primary" />
                     <Chip className={classes.skillChip} variant="outlined" size="small" label="FFT" color="primary" />

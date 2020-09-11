@@ -1,10 +1,6 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect} from 'react';
 import './App.css';
-import Header from './component/Header';
-import Footer from './component/Footer';
-import { Container } from '@material-ui/core';
-import {MainIntrodunction, introdunctionProps} from './component/introdunction/MainIntrodunction';
+import {MainIntrodunction, introdunctionProps} from './component/introdunction/MainIntrodunctionttt';
 
 const mainFeaturedPost :introdunctionProps = {
   post : {
@@ -20,10 +16,15 @@ const mainFeaturedPost :introdunctionProps = {
 };
 
 const App: React.FC = () => {
+
+  useEffect(()=>{
+    let loader = document.getElementById('loader');
+    if(loader) loader.classList.remove('preload');
+  },[]);
+
   return (
     <React.Fragment>
       <MainIntrodunction post={mainFeaturedPost.post} />
-  
     </React.Fragment>
   );
 }
