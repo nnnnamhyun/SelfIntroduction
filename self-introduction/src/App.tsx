@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import './App.css';
-import {MainIntrodunction, introdunctionProps} from './component/introdunction/MainIntrodunctionttt';
+import {MainIntrodunction, introdunctionProps} from './component/introdunction/MainIntrodunction';
 
 const mainFeaturedPost :introdunctionProps = {
   post : {

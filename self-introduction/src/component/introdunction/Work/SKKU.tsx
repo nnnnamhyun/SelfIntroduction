@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import GridContainer from '../../Grid/GridContainer';
 import GridItem from '../../Grid/GridItem';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Stepper, Step, StepLabel, StepContent, Typography, Button, Paper, Chip, MobileStepper, Divider } from '@material-ui/core';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import SwipeableViews from 'react-swipeable-views';
@@ -110,14 +111,18 @@ const useStyles = makeStyles({
         margin: "1.071rem auto 0",
         textAlign: "center"
     },
+    ul : {
+         // listStyle:'none',
+         paddingLeft:'20px'
+    },
     li :{
-        // "&:before": {
-        //     position:"absolute",
-        //     left:0,
-        //     display:'inline-block',
-        //     content:"•",
-        //     color : "#3a7bd5"
-        // },
+        "&:before": {
+            position:"absolute",
+            left:0,
+            display:'inline-block',
+            content:"•",
+            color : "#3a7bd5"
+        },
     }
 });
 
@@ -229,7 +234,7 @@ export default function SKKU(props: any) {
                     </Typography>
 
                     <Typography variant="h6" gutterBottom className={classes.do}>         
-                        <ul>
+                        <ul className={classes.ul}>
                             <li className={classes.li}>
                                 주변환경의 영향을 최소화 할 수 있는 소리 신호 제작
                             </li>
@@ -244,6 +249,9 @@ export default function SKKU(props: any) {
                             </li>   
                         </ul>
                     </Typography>
+                    <Button variant="outlined" endIcon={<ExpandMoreIcon/>}>
+                        더보기
+                    </Button>
         
                 </GridItem>     
 
@@ -285,7 +293,7 @@ export default function SKKU(props: any) {
                     </Typography>
 
                     <Typography variant="h6" gutterBottom className={classes.do}>         
-                        <ul>
+                        <ul className={classes.ul}>
                             <li className={classes.li}>
                                 프로젝트 총괄 및 서비스 기획
                             </li>

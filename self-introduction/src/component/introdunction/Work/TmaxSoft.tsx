@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import GridContainer from '../../Grid/GridContainer';
 import GridItem from '../../Grid/GridItem';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Stepper, Step, StepLabel, StepContent, Typography, Button, Paper, Chip, MobileStepper, Divider } from '@material-ui/core';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import SwipeableViews from 'react-swipeable-views';
@@ -110,8 +111,8 @@ const useStyles = makeStyles({
         textAlign: "center"
     },
     ul : {
-        listStyle:'none',
-        padding:'0px'
+        // listStyle:'none',
+        paddingLeft:'20px'
     },
     li :{
         
@@ -121,7 +122,7 @@ const useStyles = makeStyles({
             left:0,
             display:'inline-block',
             color : "#3a7bd5",
-            content : '•'
+            content : '*•*'
         },
     }
 });
@@ -176,7 +177,7 @@ export default function TmaxSoft(props: any) {
       };
     return (
         <GridContainer justify="center">
-            
+             <Divider light style={{width:'90%',marginTop:'20px',marginBottom:'20px'}}/>
              <GridItem xs={"auto"} sm={3}>
                 <GridItem xs={12} sm={12}>
                     <Typography variant="h6" gutterBottom className={classes.title}>
@@ -309,7 +310,7 @@ export default function TmaxSoft(props: any) {
                     </Typography>
 
                     <Typography variant="h6" gutterBottom className={classes.do}>      
-                        <ul>
+                        <ul className={classes.ul}>
                             <li className={classes.li}>
                                 사용하고 있던 위젯들을 재사용가능하게 변경
                             </li>
