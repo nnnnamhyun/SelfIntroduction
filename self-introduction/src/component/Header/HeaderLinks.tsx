@@ -130,7 +130,7 @@ export default function HeaderLinks() {
         <ListItem className={classes.listItem}>
             <Button className={classes.navLink} onClick={()=>{
                 let profileElement =  document.getElementById("introduction") as HTMLElement;
-                profileElement.scrollIntoView();
+                profileElement.scrollIntoView({behavior:'smooth'});
               }}
                >
                 <i className={"fa fa-user"} style={{marginRight:"5px"}}/>
@@ -142,7 +142,7 @@ export default function HeaderLinks() {
         <ListItem className={classes.listItem}>
             <Button className={classes.navLink} onClick={()=>{
                 let skillElement =  document.getElementById("skill") as HTMLElement;
-                skillElement.scrollIntoView();
+                skillElement.scrollIntoView({behavior:'smooth'});
               }}
                >
                 <i className={"fa fa-code"} style={{marginRight:"5px"}}/>
@@ -153,7 +153,7 @@ export default function HeaderLinks() {
         <ListItem className={classes.listItem}>
             <Button className={classes.navLink} onClick={()=>{
                 let projectElement =  document.getElementById("project") as HTMLElement;
-                projectElement.scrollIntoView();
+                projectElement.scrollIntoView({behavior:'smooth'});
               }}
                >
                 <i className={"fa fa-list"} style={{marginRight:"5px"}}/>

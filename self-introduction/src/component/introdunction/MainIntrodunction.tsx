@@ -7,19 +7,11 @@ import GridContainer from '../Grid/GridContainer';
 import GridItem from '../Grid/GridItem';
 
 import profile from "../../assets/img/faces/namhyun.jpg";
-import { Button, Chip, Divider } from '@material-ui/core';
-import GripSensing from './Project/GripSensing';
-import HyperStudio from './Project/HyperStudio';
-import Allight from './Project/Allight';
-import Portfolio from './Project/Portfolio';
-import AnylinkStudio from './Project/AnylinkStudio';
+import { Button } from '@material-ui/core';
 
-import SchoolRoundedIcon from '@material-ui/icons/SchoolRounded';
-import BusinessRoundedIcon from '@material-ui/icons/BusinessRounded';
-import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import TmaxSoft from './Work/TmaxSoft';
-import Skills from './Skills/Skills';
 import SKKU from './Work/SKKU';
+import SkillList, { SkillItemProps } from './presentaional/SkillList';
 const useStyles = makeStyles(theme => ({
   main: {
     background: "#FFFFFF",
@@ -130,28 +122,50 @@ export interface introdunctionProps {
 export function MainIntrodunction(props : introdunctionProps) {
 
   const classes = useStyles();
-  const [activeProject, setActiveProject] = React.useState(0);
 
   const imageClasses = classNames(
     classes.imgRaised,
     classes.imgRoundedCircle,
     classes.imgFluid
   );
-  const { post } = props;
 
-  const handleProjectClick = (key:number) => {
-    setActiveProject(key);
-    console.info(key);
-  }
+  const SKILL_LIST : SkillItemProps[] = [
+    {
+      title:  'JavaScript / TypeScript',
+      descriptions : [
+        'ES5 이상의 자바스크립트 문법에 능숙하고 개발할 수 있습니다.',
+        '실행컨텍스트, 클로져, this, 비동기처리 등 어려운 개념을 이해하고 사용 할 수 있습니다.',
+        'React/Jquery없이 DOM API를 통해 DOM을 다룰 수 있습니다.',
+        '타입스크립트를 이용하여 좀더 최적화된 OOP 를 할 수 있습니다.',
+        '다양한 디자인패턴을 적용시킬 수 있습니다.'
+      ]
+    },
+    {
+      title:  'React',
+      descriptions : [
+        'React의 원리를 알고 사용할 수 있습니다.',
+        'Class/Function Component를 설계하고 개발할 수 있습니다.',
+        '라이프사이클 함수, React Hooks 사용에 능숙합니다.',
+        'React-redux, Context API를 통해 상태 관리를 할 수 있습니다.',
+        '다양한 방법으로 리액트 최적화를 진행 할 수 있습니다.'
+      ]
+    },
+    {
+      title :'기타',
+      descriptions : [
+        'Webpack, Babel을 사용할 수 있습니다.',
+        'lint를 통한 코드 협약을 중요시 여기고 이를 바탕으로 개발할 수 있습니다.',
+        'Node.js의 Express를 이용해 간단한 REST API 개발 경험이 있습니다.',
+        'Git 및 GitLab등의 협업 툴을 이용할 수 있습니다.',
+        'Docker iamge 설정 및 image registry 환경 셋팅 경험이 있습니다.',
+        'EclipseRCP, Web Front, Android 등 다양한 클라이언트 어플리케이션 개발 경험이 있습니다.',
+        'C, Java등 다른 언어 개발 경험이 있습니다.'
 
-  const projectData = [
-      {key:0,label:'Allight', node:<Allight/>,icon:<SchoolRoundedIcon fontSize='small'/>},
-      {key:1,label:'GripSensing',  node:<GripSensing/>,icon:<SchoolRoundedIcon fontSize='small'/>},
-      {key:2,label:'Anylink Studio', node:<AnylinkStudio/> ,icon:<BusinessRoundedIcon fontSize='small'/>},
-      {key:3,label:'HyperStudio', node:<HyperStudio/> ,icon:<BusinessRoundedIcon fontSize='small'/>},
-      {key:4,label:'Portfoilo(...ing)', node:<Portfolio/> ,icon:<AccountCircleRoundedIcon fontSize='small'/>},
-      {key:5,label:'SendInstead (...ing)', node:<Portfolio/> ,icon:<AccountCircleRoundedIcon fontSize='small'/>},
-    ];
+      ]
+    }
+  ]
+  
+   
 
   return (
     <div>
@@ -200,55 +214,15 @@ export function MainIntrodunction(props : introdunctionProps) {
                 `}
               </p>
             </div>            
-
-            {/* <GridContainer justify="center" id={"skill"}> 
-              <GridItem xs={12} sm={12}>
-              <div className={classes.project}>
-                <h3 className={classes.title}>Skill</h3>
-                <div>
-                  <p>JavaScript ( ES5 ~ ) / TypeScript 문법에 익숙하며 능숙하게 다를 수 있습니다. </p>
-                  <p>React ( React, React-Redux, ContextAPI, Redux-Thunk ) 사용에 능숙합니다.</p>  
-                  <p>HTML, CSS의 표준을 준수하며 개발할 수 있습니다.</p>
-                  <p>Webpack등의 번들링 툴을 이용할 수 있습니다.</p>
-                  <p>Git 사용이 능숙합니다.</p>
-                  <p>다양한 오픈소스 사용에 능숙하며, 기존 플랫폼에 쉽게 적용할 수 있습니다.</p>
-                  <p>OOP프로그래밍에 익숙하며, 다양한 디자인 패턴을 적용할 수 있습니다.</p>
-                  <p>Node.js의 express를 이용한 backend 개발 경험이 있습니다.</p>
-                  <p>Web, Android, Eclipse RCP등 다양한 플랫폼의 프론트엔드 개발 경험이 있습니다.</p>
-                  
-                </div>
-              </div>              
-              </GridItem>
-              
-            </GridContainer> */}
             
             <GridContainer justify="center" id={"project"}>
               <GridItem xs={12} sm={12}>
               <div className={classes.project}>
                 <h3 className={classes.title}>WORK EXPERIENCE</h3>
-                {/* <div>
-                  {projectData.map(data =>{
-                    return (data.key == activeProject)
-                    ?<Chip className={classes.chip} key={data.key} label={data.label} icon={data.icon} color="primary" onClick={()=>handleProjectClick(data.key)}/> 
-                    :<Chip className={classes.chip} key={data.key} label={data.label} icon={data.icon} onClick={()=>handleProjectClick(data.key)}/>
-
-                  })}
-                </div> */}
               </div>
               <div>
-               <TmaxSoft/>
-                {/* <HyperStudio/> */}
-                {/* <AnylinkStudio/>  */}
+                <TmaxSoft/>
                 <SKKU/>
-               
-                {/* <GripSensing/>
-                <Allight/> */}
-                
-                
-                
-      {/* <Portfolio/> ,icon:<AccountCircleRoundedIcon fontSize='small'/>},
-      {key:5,label:'SendInstead (...ing)', node:<Portfolio/> ,icon:<AccountCircleRoundedIcon fontSize='small'/>},
-                {projectData[activeProject].node} */}
               </div>
               
               </GridItem>
@@ -257,11 +231,10 @@ export function MainIntrodunction(props : introdunctionProps) {
 
             <GridContainer justify="center" id={"skill"}> 
               <GridItem xs={12} sm={12}>
-              <div className={classes.project}>
-                <h3 className={classes.title}>Skills</h3>
-    
-              </div>       
-              <Skills/>       
+                <div className={classes.project}>
+                  <h3 className={classes.title}>Skills</h3>
+                </div> 
+                <SkillList skills={SKILL_LIST}/>         
               </GridItem>
               
             </GridContainer>
