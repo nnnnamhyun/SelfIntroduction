@@ -134,9 +134,9 @@ export function MainIntrodunction(props : introdunctionProps) {
       title:  'JavaScript / TypeScript',
       descriptions : [
         'ES5 이상의 자바스크립트 문법에 능숙하고 개발할 수 있습니다.',
-        '실행컨텍스트, 클로져, this, 비동기처리 등 어려운 개념을 이해하고 사용 할 수 있습니다.',
+        '실행컨텍스트, 클로져, this, 비동기처리 등의 개념을 이해하고 사용 할 수 있습니다.',
         'React/Jquery없이 DOM API를 통해 DOM을 다룰 수 있습니다.',
-        '타입스크립트를 이용하여 좀더 최적화된 OOP 를 할 수 있습니다.',
+        'TypeScript를 이용 할 수 있으며, 객체지향 프로그래밍을 할 수 있습니다.',
         '다양한 디자인패턴을 적용시킬 수 있습니다.'
       ]
     },
@@ -199,10 +199,10 @@ export function MainIntrodunction(props : introdunctionProps) {
                     <Button className={classes.margin5} target={"_blank"}  href={'https://www.linkedin.com/in/%EB%82%A8%ED%98%84-%EA%B9%80-2a8644167'}>
                       <i className={"fab fa-linkedin"} />
                     </Button>
-{/* 
-                    <h6 className={classes.job}> 성균관대학교 소프트웨어학과 학사 ( 2013.02 ~ 2016.09 )</h6>
-                    <h6 className={classes.job}> 성균관대학교 소프트웨어플랙폼학과 석사 ( 2016.09 ~ 2018.02 )</h6>
-                    <h6 className={classes.job}> 티맥스 소프트 연구원 ( 2018.02 ~ ing ) </h6> */}
+
+                    <h6 className={classes.job}> 성균관대학교 소프트웨어학과 학사</h6>
+                    <h6 className={classes.job}> 성균관대학교 소프트웨어플랙폼학과 석사</h6>
+                    <h6 className={classes.job}> 티맥스소프트 미들웨어팀 연구원 ( 2018.02 ~ ing ) </h6>
                   </div>
                 </div>
               </GridItem>
