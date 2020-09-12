@@ -11,7 +11,7 @@ import AllightInfo from './More/AllightInfo';
 const SKKU : React.FC = () =>{
     const classes = useStyles();
     const TMAX_SOFT_INFO : WorkTimeLineProps ={
-        companyName : 'SmartGrip',
+        companyName : 'SKKU',
         position : '학사/석사',
         startTime : '',
         endTime : '2018.02',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Header from '../Header/Header';
-import Parallax from '../Parallax/Parallax';
+import Parallax from '../Parallax/ParallaxCss';
 import classNames from "classnames";
 import GridContainer from '../Grid/GridContainer';
 import GridItem from '../Grid/GridItem';
@@ -109,17 +109,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export interface introdunctionProps {
-    post : {
-        title : string;
-        description : string;
-        image : string;
-        imageText : string;
-        linkText : string;
-    }
-}
-
-export function MainIntrodunction(props : introdunctionProps) {
+export function MainIntrodunction() {
 
   const classes = useStyles();
 
@@ -148,6 +138,14 @@ export function MainIntrodunction(props : introdunctionProps) {
         '라이프사이클 함수, React Hooks 사용에 능숙합니다.',
         'React-redux, Context API를 통해 상태 관리를 할 수 있습니다.',
         '다양한 방법으로 리액트 최적화를 진행 할 수 있습니다.'
+      ]
+    },
+    {
+      title:  'HTML/CSS',
+      descriptions : [
+        '시멘틱 태그를 사용하기 위해 노력합니다',
+        'SASS/SCSS 등의 css 전처리기 사용 경험이 있습니다.',
+        '브라우저 렌더링 원리를 이해하고 최적화 할 수 있습니다.'
       ]
     },
     {
@@ -210,7 +208,7 @@ export function MainIntrodunction(props : introdunctionProps) {
             </GridContainer>
             <div className={classes.description} >
               <p>
-                {` 사용자와 직접 Interaction 하는 Front-End 개발을 좋아합니다. 간결하고 예쁘지만, 편리한게 만드는걸 좋아합니다.
+                {` 사용자와 직접 Interaction 하는 Front-End 개발을 좋아합니다. 항상 사용성을 위해 고민하는 개발자입니다.
                 `}
               </p>
             </div>            

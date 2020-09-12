@@ -106,12 +106,12 @@ const tutorialSteps = [
     {
       label: '앱 실행화면',
       video: require('../../../../assets/video/allight/allight1.mp4'),
-      description : '앱 초기 실행화면. Splash 이미지가 나온 후, 로그인과 회원가입을 할 수 있는 위젯이 나온다.'
+      description : '앱 초기 실행화면. Splash 이미지가 나온 후, 로그인과 회원가입을 할 수 있는 위젯이 나옵니다.'
     },
     {
       label: '조명 On/Off',
       video: require('../../../../assets/video/allight/allight2.mp4'),
-      description : 'On/Off 버튼으로 해당 조명의 전원을 컨트롤 할 수 있습나다.'
+      description : 'On/Off 버튼으로 해당 조명의 전원을 컨트롤 할 수 있습니다.'
     },
     {
       label: '조명 색상 제어',

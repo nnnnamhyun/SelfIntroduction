@@ -1,40 +1,5 @@
 import React, { useState, ReactNode } from 'react';
 import classNames from "classnames";
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles({
-  parallax: {
-    height: "90vh",
-    maxHeight: "1000px",
-    overflow: "hidden",
-    position: "relative",
-    backgroundPosition: "center center",
-    backgroundSize: "cover",
-    margin: "0",
-    padding: "0",
-    border: "0",
-    display: "flex",
-    alignItems: "center"
-  },
-  filter :{
-    "&:before": {
-      background: "rgba(0, 0, 0, 0.5)"
-    },
-    "&:after,&:before": {
-      position:"absolute",
-      zIndex :1,
-      width: "100%",
-      height: "100%",
-      display: "block",
-      left: "0",
-      top: "0",
-      content: "''"
-    },
-  },
-  small: {
-    height: "380px"
-  }
-});
 
 interface ParallaxProps  {
   filter: boolean;
@@ -71,13 +36,7 @@ const Parallax : React.FC<ParallaxProps> = (props:ParallaxProps)=>{
     setTransform("translate3d(0," + windowScrollTop + "px,0)");
   };
 
-  const classes = useStyles();
-  const parallaxClasses = classNames({
-    [classes.parallax]: true,
-    [classes.filter]: props.filter,
-    [classes.small]: props.small,
-  });
-
+  const parallaxClasses = classNames('parallax', 'filter');
 
   return (
     <div

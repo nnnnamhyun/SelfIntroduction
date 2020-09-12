@@ -17,9 +17,14 @@ const TmaxSoft : React.FC = () =>{
             projectTitle : 'BPMN 플로우 에디터 라이브러리 개발',
             startTime: '2019.08',
             endTime :'현재',
-            description: 'Web IDE에 필요한 FLOW 에디터 라이브러리 개발을 진행하였습니다. BPMN.io를 확장시켜 진행하였고, 기존의 라이브러리에 호환성을 위해 순수 Javascript를 이용하였습니다. 또한 Class형태로 제공하여 쉽게 사용할수 있도록 설계하였고, .d.ts( types ) 파일을 제공하여 타입스크립트에서도 사용 가능하도록 개발하였습니다.',
+            description: 'Web IDE에 필요한 FLOW 에디터 라이브러리 개발을 진행하였습니다. BPMN.io를 확장시켜 진행하였고, 기존의 라이브러리에 호환성을 위해 순수 Javascript를 이용하였습니다. 또한 Class형태로 제공하여 쉽게 사용 할 수 있도록 설계하였고, .d.ts( types ) 파일을 제공하여 타입스크립트에서도 사용 가능하도록 개발하였습니다.',
             usedSkills : ['JavaScript','BPMN.io','HTML','CSS'],
-            doList : ['BPMN.io의 moduler 확장 개발','Properties Panel 확장 개발을 위한 프레임워크 코드 개발','Anylink 스펙에 맞도록 Properties Panel 확장 개발','Context Panel 개발']
+            doList : [
+                'BPMN.io의 moduler 확장 개발',
+                '빠른 Properties Panel 확장 개발을 위한 프레임워크 코드 개발',
+                'Anylink 스펙에 맞도록 Properties Panel 확장 개발',
+                'Context Panel 개발'
+            ]
         },
         {
             projectTitle : 'Web IDE 개발',
@@ -35,9 +40,10 @@ const TmaxSoft : React.FC = () =>{
             endTime :'현재',
             description: '미들웨어팀에 신입으로 입사하여 Anylink제품의 Studio 모듈을 맡았습니다. 유지 보수를 진행하였고, 고객사로부터 들어오는 추가 기능요건에 대한 개발을 진행하였습니다.',
             usedSkills : ['Java','Eclipse RCP', 'SWT'],
-            doList : ['사용하고 있던 위젯들을 재사용가능하게 변경',
-            'SWT를 활용하여 새로운 에디터 패이지 개발',
-            '고객사로부터 리포팅된 다양한 이슈 처리',
+            doList : [
+                '사용하고 있던 위젯들을 재사용가능하게 변경',
+                'SWT를 활용하여 새로운 에디터 페이지 개발',
+                '고객사로부터 리포팅된 다양한 이슈 처리',
             ],
             hideDivider : true
         }  
