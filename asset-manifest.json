@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/SelfIntroduction/static/css/main.5df7d988.chunk.css",
-    "main.js": "/SelfIntroduction/static/js/main.542d8c45.chunk.js",
-    "main.js.map": "/SelfIntroduction/static/js/main.542d8c45.chunk.js.map",
-    "runtime-main.js": "/SelfIntroduction/static/js/runtime-main.356a1bdc.js",
-    "runtime-main.js.map": "/SelfIntroduction/static/js/runtime-main.356a1bdc.js.map",
-    "static/js/2.f3df9e01.chunk.js": "/SelfIntroduction/static/js/2.f3df9e01.chunk.js",
-    "static/js/2.f3df9e01.chunk.js.map": "/SelfIntroduction/static/js/2.f3df9e01.chunk.js.map",
+    "main.css": "/SelfIntroduction/static/css/main.b48239f0.chunk.css",
+    "main.js": "/SelfIntroduction/static/js/main.5555f4a6.chunk.js",
+    "main.js.map": "/SelfIntroduction/static/js/main.5555f4a6.chunk.js.map",
+    "runtime-main.js": "/SelfIntroduction/static/js/runtime-main.2b392821.js",
+    "runtime-main.js.map": "/SelfIntroduction/static/js/runtime-main.2b392821.js.map",
+    "static/js/2.d89e7334.chunk.js": "/SelfIntroduction/static/js/2.d89e7334.chunk.js",
+    "static/js/2.d89e7334.chunk.js.map": "/SelfIntroduction/static/js/2.d89e7334.chunk.js.map",
     "index.html": "/SelfIntroduction/index.html",
-    "precache-manifest.9b3d0ec63340ff0fde5fc1a8c89b740d.js": "/SelfIntroduction/precache-manifest.9b3d0ec63340ff0fde5fc1a8c89b740d.js",
+    "precache-manifest.d38c355b3425542d920a2291a98ff6de.js": "/SelfIntroduction/precache-manifest.d38c355b3425542d920a2291a98ff6de.js",
     "service-worker.js": "/SelfIntroduction/service-worker.js",
-    "static/css/main.5df7d988.chunk.css.map": "/SelfIntroduction/static/css/main.5df7d988.chunk.css.map",
-    "static/js/2.f3df9e01.chunk.js.LICENSE": "/SelfIntroduction/static/js/2.f3df9e01.chunk.js.LICENSE",
+    "static/css/main.b48239f0.chunk.css.map": "/SelfIntroduction/static/css/main.b48239f0.chunk.css.map",
+    "static/js/2.d89e7334.chunk.js.LICENSE.txt": "/SelfIntroduction/static/js/2.d89e7334.chunk.js.LICENSE.txt",
     "static/media/allight1.mp4": "/SelfIntroduction/static/media/allight1.710516ce.mp4",
     "static/media/allight2.mp4": "/SelfIntroduction/static/media/allight2.58141736.mp4",
     "static/media/allight3.mp4": "/SelfIntroduction/static/media/allight3.50d49a9c.mp4",
@@ -28,14 +28,15 @@
     "static/media/record.png": "/SelfIntroduction/static/media/record.5b95ab7b.png",
     "static/media/righthand.png": "/SelfIntroduction/static/media/righthand.f55920ae.png",
     "static/media/soundsignal.png": "/SelfIntroduction/static/media/soundsignal.8bbd117a.png",
+    "static/media/App.scss": "/SelfIntroduction/static/media/spinner.e8172795.gif",
     "static/media/step1.mp4": "/SelfIntroduction/static/media/step1.3fac9649.mp4",
     "static/media/step2.mp4": "/SelfIntroduction/static/media/step2.219d17ae.mp4",
     "static/media/step3.mp4": "/SelfIntroduction/static/media/step3.0cc57ebc.mp4"
   },
   "entrypoints": [
-    "static/js/runtime-main.356a1bdc.js",
-    "static/js/2.f3df9e01.chunk.js",
-    "static/css/main.5df7d988.chunk.css",
-    "static/js/main.542d8c45.chunk.js"
+    "static/js/runtime-main.2b392821.js",
+    "static/js/2.d89e7334.chunk.js",
+    "static/css/main.b48239f0.chunk.css",
+    "static/js/main.5555f4a6.chunk.js"
   ]
 }
