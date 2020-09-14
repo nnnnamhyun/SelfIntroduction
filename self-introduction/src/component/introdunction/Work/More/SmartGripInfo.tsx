@@ -1,9 +1,8 @@
-import React, { ReactNode } from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import GridContainer from '../../../Grid/GridContainer';
 import GridItem from '../../../Grid/GridItem';
-import { Stepper, Step, StepLabel, StepContent, Typography, Button, Paper, Chip, GridList, GridListTile, ListSubheader, GridListTileBar, Box, Tooltip, Divider, Grid } from '@material-ui/core';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import { Stepper, Step, StepLabel, StepContent, Typography, Button, Paper} from '@material-ui/core';
 import game from "../../../../assets/img/gripsensing/game.png";
 import message from "../../../../assets/img/gripsensing/message.png";
 import call from "../../../../assets/img/gripsensing/call.png";
@@ -90,19 +89,25 @@ const useStyles = makeStyles({
         width: "100%"
     },
     gripBox: {
+        margin: "2px 2px 0px 2px",
+        width: "160px",
+        height: "160px",
         display: "inline-block",
+        backgroundColor : '#F2F2F2'
     },
     imgFluid: {
-        margin: "15px 15px 0px 15px",
-        maxWidth: "160px",
+        width: "160px",
         height: "160px"
     },
     imageContainer: {
         textAlign: "center",
         width: "100%"
     },
+    principleBox: {
+        margin: "2px 2px 0px 2px",
+        display: "inline-block",
+    },
     imgPrinciple: {
-        margin: "15px 15px 0px 15px",
         maxWidth: "350px",
         width: "100%",
         height: "auto"
@@ -156,10 +161,32 @@ function getStepContentDetailed(step: number) {
   }
 
 
+export const VideoComponent : React.FC<any> = (props: any) =>{
+    const classes = useStyles(); 
+    const [canPlay, setCanPlay] = useState(false);
+    const style = {
+
+    }
+    return(
+        <video
+            className = {canPlay ? classes.video : 'preloadRelative'}
+            preload="auto" 
+            playsInline={true} 
+            autoPlay={true}
+            muted={true}
+            loop={true}
+            onCanPlay ={()=>setCanPlay(true)} 
+            src={props.src}>
+        </video>
+                
+    )
+}
+
+
 
 export default function SmartGripInfo(props: any) {
     const classes = useStyles();
-    const [activeStep, setActiveStep] = React.useState(0);
+    const [activeStep, setActiveStep] = useState(0);
     const steps = getSteps();
     const handleNext = () => {
         setActiveStep(prevActiveStep => prevActiveStep + 1);
@@ -176,16 +203,10 @@ export default function SmartGripInfo(props: any) {
     const getStepContent = (index : number) =>{
         return (
             <>
-                <video
-                    className = {classes.video}
-                    preload="auto" 
-                    playsInline={true} 
-                    autoPlay={true}
-                    muted={true}
-                    loop={true}
+                <VideoComponent
                     src={getStepContentVideo(index)}>
-                </video>
-            
+                </VideoComponent>
+
                 <Typography variant="body2" >{getStepContentDetailed(index)}</Typography>
 
                 
@@ -269,21 +290,20 @@ export default function SmartGripInfo(props: any) {
                 </Typography>
                 <GridContainer justify="center">
                     <div className = { classes.imageContainer}>
-                        <div className = {classes.gripBox}>
+                        <div className = {classes.principleBox}>
                             <img src={principle} className={classes.imgPrinciple} />
                             <Typography variant="caption" display="block" gutterBottom>
                                 소리의 전달 방식
                             </Typography>
-        
                         </div>
-                        <div className = {classes.gripBox}>
+                        <div className = {classes.principleBox}>
                             <img src={soundsignal} className={classes.imgPrinciple} />
                             <Typography variant="caption" display="block" gutterBottom>
                                 사용된 소리 신호
                             </Typography>
         
                         </div>
-                        <div className = {classes.gripBox}>
+                        <div className = {classes.principleBox}>
                             <img src={record} className={classes.imgPrinciple} />
                             <Typography variant="caption" display="block" gutterBottom>
                                 왼손과 오른손의 소리신호 녹음결과

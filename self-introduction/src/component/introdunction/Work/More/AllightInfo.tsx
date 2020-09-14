@@ -1,9 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import GridContainer from '../../../Grid/GridContainer';
 import GridItem from '../../../Grid/GridItem';
-import { Typography, Button, MobileStepper, Divider } from '@material-ui/core';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import { Typography, Button, MobileStepper } from '@material-ui/core';
 import SwipeableViews from 'react-swipeable-views';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
@@ -130,6 +129,27 @@ const tutorialSteps = [
     },
     
   ];
+
+const VideoComponent : React.FC<any> = (props: any) =>{
+    const classes = useStyles(); 
+    const [canPlay, setCanPlay] = useState(false);
+    const style = {
+
+    }
+    return(
+        <video
+            className = {canPlay ? classes.video : 'preloadRelativeTmp'}
+            preload="auto" 
+            playsInline={true} 
+            autoPlay={true}
+            muted={true}
+            loop={true}
+            onCanPlay ={()=>setCanPlay(true)} 
+            src={props.src}>
+        </video>
+                
+    )
+}
 export default function AllightInfo(props: any) {
     const classes = useStyles();
     const theme = useTheme();
@@ -170,7 +190,9 @@ export default function AllightInfo(props: any) {
 
                         <div key={step.label}>
                             <GridContainer style={{margin:'0px'}} justify="flex-start">
-                            <video
+                            <VideoComponent
+                                src={step.video}/>
+                            {/* <video
                                 className = {classes.video}
                                 preload="auto" 
                                 playsInline={true} 
@@ -178,7 +200,7 @@ export default function AllightInfo(props: any) {
                                 muted={true}
                                 loop={true}
                                 src={step.video}>
-                            </video>
+                            </video> */}
 
                             <div className = {classes.appDescription}>
                             <Typography variant="body2" gutterBottom>

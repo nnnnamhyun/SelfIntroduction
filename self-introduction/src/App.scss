@@ -77,12 +77,6 @@
   height : auto;
 }
 
-.workTimeLine {
-  .title {
-    
-  }
-}
-
 
 .parallax {
   height: 90vh;
@@ -166,10 +160,34 @@
   right: 0;
   bottom: 0;
   z-index: 50000;
+  background-color: black;
   background-image: url(./assets/img/spinner.gif);
   background-size: 60px 60px;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
+  transition: opacity 0.8s;
+}
+
+.preloadRelative{
+  width: 100%;
+  max-width : 500px;
+  z-index: 50000;
+  background-image: url(./assets/img/spinner.gif);
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: opacity 0.8s;
+}
+
+.preloadRelativeTmp{
+  margin: 0 auto;
+  width: 100%;
+  height:auto;
+  z-index: 50000;
+  background-image: url(./assets/img/spinner.gif);
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
   background-position: center;
   transition: opacity 0.8s;
 }
