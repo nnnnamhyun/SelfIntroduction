@@ -24,7 +24,7 @@ const SKKU : React.FC = () =>{
             description: 
                 <>
                     소리 신호를 이용한 스마트폰 그립 감지 시스템입니다.
-                    <Button
+                    {/* <Button
                             variant="contained"
                             color="secondary"
                             size="small"
@@ -34,8 +34,11 @@ const SKKU : React.FC = () =>{
                             startIcon={<PlayArrowIcon />}
                     >
                         Watch Video
-                    </Button> 
+                    </Button>  */}
 
+                    <Typography variant="caption" display="block" gutterBottom>
+                        Video : https://youtu.be/HpuazVu3mA0
+                    </Typography>
                     <Typography variant="caption" display="block" gutterBottom>
                         Towards grip sensing for commodity smartphones through acoustic signature (UbiComp '17 2017)
                     </Typography>
@@ -58,7 +61,7 @@ const SKKU : React.FC = () =>{
             <>
                 에트리 WoT 홈 가전 경진대회 제출물로, 스마트폰과 스마트전구를 연동하여 스마트폰으로 오는 알림들을 스마트전구를 통해 시각적으로 보여줍니다.
                 IFTTT( If This, Then That )의 개념을 적용한 서비스입니다. 예를들어, '메일이 오면 (If This) 빨간색 불빛으로 2번 깜박여줘 (Then That)'와 같은 기능을 실행 할 수 있습니다.
-                <Button
+                {/* <Button
                         variant="contained"
                         color="secondary"
                         size="small"
@@ -68,8 +71,11 @@ const SKKU : React.FC = () =>{
                         startIcon={<PlayArrowIcon />}
                 >
                     Watch Video
-                </Button> 
+                </Button>  */}
 
+                <Typography variant="caption" display="block" gutterBottom>
+                    Video : https://youtu.be/BD8aFohG8cg
+                </Typography>
                 <Typography variant="caption" display="block" gutterBottom>
                     ETRI WoT 홈 가전 경진대회 우수상
                 </Typography>
@@ -99,7 +105,7 @@ const SKKU : React.FC = () =>{
                         description = {project.description}
                         usedSkills = {project.usedSkills}
                         doList = {project.doList}
-                        moreInfo = {project.moreInfo}
+                       // moreInfo = {project.moreInfo}
                         hideDivider = {project.hideDivider}
                     />
                 )
