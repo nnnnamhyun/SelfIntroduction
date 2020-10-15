@@ -190,7 +190,7 @@ export function MainIntrodunction() {
                   </div>
                   <div className={classes.name}>
                     <h3 className={classes.title}>NamHyun Kim</h3>
-                    <h6 className={classes.job}> DVELOPER</h6>
+                    <h6 className={classes.job}> DEVELOPER</h6>
                     <Button className={classes.margin5} target={"_blank"} href={"mailto: knh6210@gmail.com"}>
                       <i className={"fas fa-envelope"} />
                     </Button>
