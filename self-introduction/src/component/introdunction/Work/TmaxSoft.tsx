@@ -15,13 +15,13 @@ const TmaxSoft : React.FC = () =>{
     const TMAX_PROJECT_LIST : WorkProjectProps[] = [
         {
             projectTitle : 'BPMN 플로우 에디터 라이브러리 개발',
-            startTime: '2019.08',
+            startTime: '2019.11',
             endTime :'현재',
-            description: 'Web IDE에 필요한 FLOW 에디터 라이브러리 개발을 진행하였습니다. BPMN.io를 확장시켜 진행하였고, 기존의 라이브러리에 호환성을 위해 순수 Javascript를 이용하였습니다. 또한 Class형태로 제공하여 쉽게 사용 할 수 있도록 설계하였고, .d.ts( types ) 파일을 제공하여 타입스크립트에서도 사용 가능하도록 개발하였습니다.',
+            description: 'Web IDE에 필요한 FLOW 에디터 라이브러리 개발을 진행하였습니다. BPMN.io를 확장시켜 진행하였습니다. 또한 Class형태로 제공하여 쉽게 사용 할 수 있도록 설계하였고, .d.ts( types ) 파일을 제공하여 타입스크립트에서도 사용 가능하도록 개발하였습니다.',
             usedSkills : ['JavaScript','BPMN.io','HTML','CSS'],
             doList : [
                 'BPMN.io의 moduler 확장 개발',
-                '빠른 Properties Panel 확장 개발을 위한 프레임워크 코드 개발',
+                '빠른 Properties Panel 확장 개발을 위한 코드 프레임워크화',
                 'Anylink 스펙에 맞도록 Properties Panel 확장 개발',
                 'Context Panel 개발'
             ]
@@ -32,7 +32,14 @@ const TmaxSoft : React.FC = () =>{
             endTime :'현재',
             description: 'Anylink 제품 개발에 필요한 Web IDE 모듈을 개발하였습니다. IDE에 필요한 Navigator, Workspace, Editor, Preference 등의 기능을 구현하였고 꾸준히 리팩토링하며 향상시켜나가고 있습니다.',
             usedSkills : ['TypeScript','React','React-redux','Redux-thunk','Inversify.js','Theia','Node.js','Express','HTML','CSS'],
-            doList : ['Theia Framework를 이용한 SPA WEB IDE 개발','React 컴포넌트 계층 구조 디자인 및 이를 이용한 리소스 에디터 페이지 개발','React-redux, Redux-thunk를 이용한 상태 관리 및 비동기 처리','TypeScript를 이용한 OOP 프로그래밍 및 다양한 디자인 패턴 적용','Express를 이용한 Backend 확장','Inversify를 이용한 dependency injection 적용']
+            doList : [
+                '이전 버전의 Studio의 UX/UI문제점 분석 및 이를 반영한 UX/UI 설계',
+                'Theia Framework를 이용한 SPA WEB IDE 개발',
+                'React 컴포넌트 계층 구조 디자인 및 이를 이용한 리소스 에디터 페이지 개발',
+                'React-redux, Redux-thunk를 이용한 상태 관리 및 비동기 처리',
+                'TypeScript를 이용한 OOP 프로그래밍 및 다양한 디자인 패턴 적용',
+                'Express를 이용한 Backend 확장',
+                'Inversify를 이용한 dependency injection 적용']
         },
         {
             projectTitle : 'Anylink7 Studio 개발',

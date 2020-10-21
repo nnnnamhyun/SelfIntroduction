@@ -157,6 +157,7 @@ export function MainIntrodunction() {
         'Git 및 GitLab등의 협업 툴을 이용할 수 있습니다.',
         'Docker iamge 설정 및 image registry 환경 셋팅 경험이 있습니다.',
         'EclipseRCP, Web Front, Android 등 다양한 클라이언트 어플리케이션 개발 경험이 있습니다.',
+        '모바일HCI 연구 경험이 있고, 이를 바탕으로 세로운 UX를 개발한 경험이 있습니다.',
         'C, Java등 다른 언어 개발 경험이 있습니다.'
 
       ]
@@ -208,7 +209,7 @@ export function MainIntrodunction() {
             </GridContainer>
             <div className={classes.description} >
               <p>
-                {` 사용자와 직접 Interaction 하는 Front-End 개발을 좋아합니다. 항상 사용성을 위해 고민하는 개발자입니다.
+                {` 사용자와 직접 Interaction 하는 Front-End 개발을 좋아합니다. 사용성을 먼저 생각하며, 사용자의 입장을 생각하며 개발합니다.
                 `}
               </p>
             </div>            
