@@ -79,6 +79,20 @@ const SKKU : React.FC = () =>{
             doList : ['프로젝트 총괄 및 서비스 기획',
                 '안드로이드 어플리케이션 설계 및 개발'],
             moreInfo:<AllightInfo/>,
+        },
+        {
+            projectTitle : 'Beacon Alarm Service',
+            startTime: '2015.7',
+            endTime :'2015.11',
+            description: 
+            <>
+                '기가레인'과 함께 진행한 프로젝트로, 비콘을 이용하여 교내 알림 시스템을 개발하였습니다. 저는 비콘/알림 관리를 위한 웹 페이지 제작을 맡았습니다.
+            </>
+            ,
+            usedSkills : ['node.js','express','javascript','HTML','CSS','Bootstrap','Jquery','Mysql'],
+            doList : ['프로젝트 기획',
+            '비콘/알림 관리 페이지 개발',
+            'node.js/express를 이용한 backend 서비스 개발'],
             hideDivider:true
         }
     ];

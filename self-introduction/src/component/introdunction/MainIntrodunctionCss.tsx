@@ -128,7 +128,7 @@ export function MainIntrodunction() {
             </GridContainer>
             <div className='description'>
               <p>
-                {` 사용자와 직접 Interaction 하는 FrontEnd 개발을 좋아합니다. 사용성을 먼저 생각하며 사용자의 입장을 이해하기 위해 고민하고 노력합니다.
+                {` 사용자와 직접 Interaction 하는 프론트엔드 개발을 좋아합니다. 사용성을 먼저 생각하며 사용자의 입장을 이해하기 위해 고민하고 노력합니다.
                 `}
               </p>
             </div>
