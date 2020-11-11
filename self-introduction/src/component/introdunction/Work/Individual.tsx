@@ -28,7 +28,6 @@ const Individual: React.FC = () => {
       doList: [
         "React를 이용한 Slider 기반의 Component 개발",
         "LocalStorage를 이용한 스케쥴 데이터 관리",
-        "Service-Worker를 이용한 PWA 개발",
         "Service-worker를 이용한 backgorund notification 서비스 제공",
         "Redux를 이용한 컴포넌트 상태관리"
       ],
